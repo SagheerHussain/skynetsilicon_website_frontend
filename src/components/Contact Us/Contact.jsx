@@ -100,7 +100,7 @@ const Contact = () => {
     // ReCaptcha Change
     const handleCaptchaChange = async (value) => {
         // Step 1: Verify reCAPTCHA with the backend
-        const recaptchaResponse = await fetch("https://skynetsilicon-website-backend.vercel.app/verify-recaptcha", {
+        const recaptchaResponse = await fetch("http://localhost:5000/verify-recaptcha", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ token: value }),
