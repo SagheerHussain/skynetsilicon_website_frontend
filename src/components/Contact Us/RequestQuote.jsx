@@ -66,7 +66,7 @@ const RequestQuote = () => {
     // Fetching Categories
     useEffect(() => {
         (async () => {
-            const response = await fetch("https://skynetsiliconserver.vercel.app/api/category");
+            const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/category");
             const data = await response.json();
             setCategories(data);
         })()
@@ -76,7 +76,7 @@ const RequestQuote = () => {
     // ReCaptcha Change
     const handleCaptchaChange = async (value) => {
         // Step 1: Verify reCAPTCHA with the backend
-        const recaptchaResponse = await fetch("http://localhost:5000/verify-recaptcha", {
+        const recaptchaResponse = await fetch("https://skynetsilicon-website-backend.vercel.app/verify-recaptcha", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ token: value }),

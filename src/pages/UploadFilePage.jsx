@@ -28,7 +28,7 @@ const UploadFilePage = () => {
         formData.append("category", category);
 
         try {
-            const response = await fetch("http://localhost:5000/api/portfolio", {
+            const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/portfolio", {
                 method: "POST",
                 headers: {},
                 body: formData, // Send form data as the request body
@@ -53,7 +53,7 @@ const UploadFilePage = () => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch("https://skynetsiliconserver.vercel.app/api/category");
+                const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/category");
                 const data = await response.json();
                 setCategories(data);
                 console.log(data)
@@ -67,7 +67,7 @@ const UploadFilePage = () => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/portfolio");
+                const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/portfolio");
                 const data = await response.json();
                 setPortfolio(data);
                 console.log(data)

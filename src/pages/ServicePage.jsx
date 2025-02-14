@@ -30,7 +30,7 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
             setApiLoading(true);
             setIsClick(false);
             try {
-                const response = await fetch(`https://skynetsiliconserver.vercel.app/api/services/${category}`);
+                const response = await fetch(`https://skynetsilicon-website-backend.vercel.app/api/services/${category}`);
                 const data = await response.json();
                 if (isMounted) {
                     setService(data);

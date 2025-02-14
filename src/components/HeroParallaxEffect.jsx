@@ -4,9 +4,6 @@ import { HeroParallax } from "./ui/hero-parallax";
 export function HeroParallaxEffect({
     isClick
 }) {
-    // Fetch Portfolio
-
-
     return <div className="max-h-screen">
         <HeroParallax portfolio={products} isClick={isClick} />;
     </div>
