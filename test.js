@@ -4,6 +4,7 @@
 const Skynet_Service = [
     {
         title: "Web Development",
+        hello: "testing",
         description: "abcdef",
         category: "Web Development",
         featured_list: ["Create A Unique Digital Experience", "Drive Higher Conversions", "Attract Qualified Traffic"],
