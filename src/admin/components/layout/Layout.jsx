@@ -4,13 +4,15 @@ import { Navbar, Footer, Sidebar } from '../index';
 const Layout = ({ children }) => {
     return (
         <>
-            <div className="flex">
-                <div className='w-[300px] fixed top-0 h-screen '>
+            <div className="flex overflow-x-hidden relative">
+                <div className='w-[15vw] fixed top-0 h-screen '>
                     <Sidebar />
                 </div>
-                <div className={`ms-[300px]`}>
+                <div className={`ms-[15vw]`}>
                     <Navbar />
-                    {children}
+                    <div className="bg-[#17171a]">
+                        {children}
+                    </div>
                     <Footer />
                 </div>
             </div>

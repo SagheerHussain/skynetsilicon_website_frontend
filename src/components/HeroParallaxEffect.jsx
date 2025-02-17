@@ -4,7 +4,7 @@ import { HeroParallax } from "./ui/hero-parallax";
 export function HeroParallaxEffect({
     isClick
 }) {
-    return <div className="max-h-screen">
+    return <div className="">
         <HeroParallax portfolio={products} isClick={isClick} />;
     </div>
 }

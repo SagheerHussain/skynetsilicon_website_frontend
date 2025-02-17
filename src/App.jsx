@@ -5,6 +5,7 @@ import "./App.css";
 import ComingSoon from './components/ComingSoon';
 import PreLoader from './components/PreLoader';
 import { AnalyticsPage } from './admin/page/page';
+import { AddService, ViewService, EditService } from './admin/components';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,9 @@ function App() {
 
         {/* Admin Routes */}
         <Route path='/dashboard' element={<AnalyticsPage />} />
+        <Route path='/dashboard/add-service' element={<AddService />} />
+        <Route path='/dashboard/view-services' element={<ViewService />} />
+        <Route path='/dashboard/edit-service/:id' element={<EditService />} />
 
       </Routes>
     </>

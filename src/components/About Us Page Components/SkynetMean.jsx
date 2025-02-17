@@ -11,28 +11,28 @@ const SkynetMean = () => {
                     </div>
                     <div className="flex sm:flex-row flex-col justify-center gap-3 mt-8">
                         <div className="">
-                            <span className='text-center text-6xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20  p-8'>S</span>
-                            <h3 className='text-center mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Strength</h3>
+                            <span className='text-center text-5xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20 sm:p-8'>S</span>
+                            <h3 className='text-center mt-2 sm:mt-3 text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Strength</h3>
                         </div>
                         <div className="">
-                            <span className='text-center text-6xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20   p-8'>K</span>
-                            <h3 className='text-center mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Knowledge</h3>
+                            <span className='text-center text-5xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20 sm:p-8'>K</span>
+                            <h3 className='text-center mt-2 sm:mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Knowledge</h3>
                         </div>
                         <div className="">
-                            <span className='text-center text-6xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20   p-8'>Y</span>
-                            <h3 className='text-center mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Your Success</h3>
+                            <span className='text-center text-5xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20 sm:p-8'>Y</span>
+                            <h3 className='text-center mt-2 sm:mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Your Success</h3>
                         </div>
                         <div className="">
-                            <span className='text-center text-6xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20 p-8'>N</span>
-                            <h3 className='text-center mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Never Give Up</h3>
+                            <span className='text-center text-5xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20 sm:p-8'>N</span>
+                            <h3 className='text-center mt-2 sm:mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Never Give Up</h3>
                         </div>
                         <div className="">
-                            <span className='text-center text-6xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20  p-8'>E</span>
-                            <h3 className='text-center mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Excellence</h3>
+                            <span className='text-center text-5xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20  sm:p-8'>E</span>
+                            <h3 className='text-center mt-2 sm:mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Excellence</h3>
                         </div>
                         <div className="">
-                            <span className='text-center text-6xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20  p-8'>T</span>
-                            <h3 className='text-center mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Trust</h3>
+                            <span className='text-center text-5xl sm:text-5xl md:text-7xl lg:text-9xl block font-bold text-[#1092fd] bg-white/20 sm:p-8'>T</span>
+                            <h3 className='text-center mt-2 sm:mt-3 sm:text-sm md:text-medium lg:text-lg font-bold uppercase text_gradient'>Trust</h3>
                         </div>
                     </div>
                 </div>

@@ -3,21 +3,21 @@ import React from 'react'
 import { IoHome } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
 
-const BreadCrumb = ({ category, page }) => {
+const BreadCrumb = ({ color = "text-white", title = "Home", category, page }) => {
     return (
         <>
-            <Breadcrumbs aria-label="breadcrumb" className='text-white' separator="›">
-                <Link underline="hover" className='text-white' href="/">
-                    <span className='flex items-center'><IoHome className='mb-1 text-[#fff] me-2' /> Home</span>
+            <Breadcrumbs aria-label="breadcrumb" className={`${color}`} separator="›">
+                <Link underline="hover" className={`${color}`} href="/">
+                    <span className='flex items-center'><IoHome className={`mb-1 ${color} me-2`} /> {title}</span>
                 </Link>
                 <Link
                     underline="hover"
-                    className='text-white'
+                    className={`${color}`}
                     href="/material-ui/getting-started/installation/"
                 >
                     {page}
                 </Link>
-                <Typography className='text-white'>{category || "Loading Service..."}</Typography>
+                {category && <Typography className={`${color}`}>{category}</Typography>}
             </Breadcrumbs>
         </>
     )

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Logo } from "../../../components/index";
-import logoSrc from "/Images/logo-white.svg"
+import logoSrc from "/Images/logo-white.svg";
 import { Collapse, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { HiOutlineChevronRight, HiOutlineChevronDown } from "react-icons/hi";
 import { Link } from 'react-router-dom';
@@ -33,7 +33,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <aside id='sidebar' className='sidebar bg-[#00042a] h-full'>
+            <aside id='sidebar' className='sidebar bg-zinc-950 h-full'>
                 <div className="sidbar_logo flex justify-center">
                     <Logo src={logoSrc} />
                 </div>
@@ -67,13 +67,13 @@ const Sidebar = () => {
                                             <ListItemIcon className='-mr-4'>
                                                 <GoDot className='text-white' />
                                             </ListItemIcon>
-                                            <Link className='text-white' to={``}>Add Service</Link>
+                                            <Link className='text-white' to={`/dashboard/add-service`}>Add Service</Link>
                                         </ListItemButton>
                                         <ListItemButton sx={{ pl: 4 }}>
                                             <ListItemIcon className='-mr-4'>
                                                 <GoDot className='text-white' />
                                             </ListItemIcon>
-                                            <Link className='text-white' to={``}>View Services</Link>
+                                            <Link className='text-white' to={`/dashboard/view-services`}>View Services</Link>
                                         </ListItemButton>
                                     </List>
                                 </Collapse>
@@ -132,35 +132,6 @@ const Sidebar = () => {
                                                 <GoDot className='text-white' />
                                             </ListItemIcon>
                                             <Link className='text-white text-lg' to={``}>View Categories</Link>
-                                        </ListItemButton>
-                                    </List>
-                                </Collapse>
-                            </div>
-                        </div>
-
-                        {/* Pricing */}
-                        <div className='text-white border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]'>
-                            <div className="px-[.75rem]">
-                                <ListItemButton onClick={handlePricing} className='text-white relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'>
-                                    <ListItemIcon className='-mr-4'>
-                                        <IoPricetagsOutline className='text-white text-xl' />
-                                    </ListItemIcon>
-                                    <h6>Pricing</h6>
-                                    {pricing ? <HiOutlineChevronDown className='ms-auto' /> : <HiOutlineChevronRight className='ms-auto' />}
-                                </ListItemButton>
-                                <Collapse in={pricing} timeout="auto" unmountOnExit>
-                                    <List component="div" disablePadding>
-                                        <ListItemButton sx={{ pl: 4 }}>
-                                            <ListItemIcon className='-mr-4'>
-                                                <GoDot className='text-white' />
-                                            </ListItemIcon>
-                                            <Link className='text-white text-lg' to={``}>Add Pricing</Link>
-                                        </ListItemButton>
-                                        <ListItemButton sx={{ pl: 4 }}>
-                                            <ListItemIcon className='-mr-4'>
-                                                <GoDot className='text-white' />
-                                            </ListItemIcon>
-                                            <Link className='text-white text-lg' to={``}>View Pricing</Link>
                                         </ListItemButton>
                                     </List>
                                 </Collapse>

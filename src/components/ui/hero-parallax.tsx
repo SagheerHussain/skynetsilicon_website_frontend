@@ -58,7 +58,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className={`${isClick ? "h-screen" : "h-[300vh] 2xl:h-[280vh]"} py-40 overflow-hidden bg-[#00042a]  flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]`}
+            className={`${isClick ? "h-screen" : "h-[300vh] xl:h-[2500px]"} py-40 overflow-hidden bg-[#00042a]  flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]`}
         >
             <Header />
 
@@ -76,7 +76,7 @@ export const HeroParallax = ({
                         <ProductCard
                             portfolio={port}
                             translate={translateX}
-                            // key={port._id}
+                        // key={port._id}
                         />
                     ))}
                 </motion.div>
@@ -85,16 +85,16 @@ export const HeroParallax = ({
                         <ProductCard
                             portfolio={product}
                             translate={translateXReverse}
-                            // key={product._id}
+                        // key={product._id}
                         />
                     ))}
                 </motion.div>
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
                     {thirdRow.map((product) => (
                         <ProductCard
-                        portfolio={product}
+                            portfolio={product}
                             translate={translateX}
-                            // key={product._id}
+                        // key={product._id}
                         />
                     ))}
                 </motion.div>
@@ -105,7 +105,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
     return (
-        <div className="max-w-[1280px] relative mx-auto px-4 w-full left-0 top-[10%] text-center">
+        <div className="absolute h-[80vh] mx-auto px-4 w-full left-0 flex items-center justify-center flex-col text-center">
             <h1 className="text-[2rem] md:text-8xl font-bold text-white">
                 About Skynet Silicon
             </h1>
@@ -139,14 +139,12 @@ export const ProductCard = ({
             // key={portfolio._id}
             className="group/product h-96 w-[30rem] relative flex-shrink-0"
         >
-
             <img
                 src={`${portfolio.src}`}
                 className="object-cover object-left-top absolute inset-0 h-[600px] w-[600px]"
                 alt={portfolio.title}
                 loading="lazy"
             />
-
             <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
             <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
                 {portfolio.title}

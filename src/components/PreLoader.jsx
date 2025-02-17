@@ -26,21 +26,6 @@ const PreLoader = () => {
                 },
             },
         );
-
-        gsap.fromTo(
-            ".logo-name",
-            {
-                y: 50,
-                opacity: 0,
-            },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                delay: 0,
-            }
-        );
-
     }, [])
 
     return (
@@ -77,11 +62,6 @@ const PreLoader = () => {
                         </g>
                     </g>
                 </svg>
-                <div className="name-container">
-                    <div className="logo-name" ref={logoRef}>
-                        <img src={logo} alt="" />
-                    </div>
-                </div>
             </div>
 
         </>

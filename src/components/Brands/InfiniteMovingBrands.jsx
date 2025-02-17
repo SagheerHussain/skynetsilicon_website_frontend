@@ -10,12 +10,12 @@ const InfiniteMovingBrands = ({
 }) => {
     return (
         <>
-            <div className={`${height} flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden`}>
+            <div className={`${height} items-center justify-center relative overflow-hidden ${bgColor}`}>
                 <InfiniteMovingCards
                     items={brand}
                     direction="left"
                     speed="slow"
-                    className={`${bgColor}`}
+                    // className={`${bgColor}`}
                     itemClass={`${className}`}
                 />
             </div>

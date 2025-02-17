@@ -21,11 +21,11 @@ const ServicePortfolioImages = () => {
     return (
         <>
             <div className="service_portfolio_images flex">
-                {
+                {/* {
                     servicePortfolio?.map((portfolio) => (
                         <img key={portfolio.id} src={portfolio.src} className='flex-nowrap relative z-[10]' />
                     ))
-                }
+                } */}
             </div>
         </>
     )

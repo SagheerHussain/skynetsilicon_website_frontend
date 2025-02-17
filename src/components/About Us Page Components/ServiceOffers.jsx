@@ -15,9 +15,9 @@ const ServiceOffers = () => {
                             <h1 className='text-3xl sm:text-4xl md:text-5xl leading-tight font-bold text-[#00042a] mb-10'>Empower Your Business with Our Wide Range of Services </h1>
                             <div className="services">
                                 <div className="sm:flex">
-                                    <div className="service-detail flex">
+                                    <div className="service_offer flex py-[1rem] sm:py-0">
                                         <div className="service-detail-icon me-2 mt-[3px]">
-                                            <IoMdCheckmark></IoMdCheckmark>
+                                            <IoMdCheckmark className='text-sky-500' />
                                         </div>
                                         <div className="service-detail-description">
                                             <h5 className='text-sm font-bold mb-3'>Web Development</h5>
@@ -25,9 +25,9 @@ const ServiceOffers = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="service-detail flex">
+                                    <div className="service_offer flex pb-4">
                                         <div className="service-detail-icon me-2 mt-[3px]">
-                                            <IoMdCheckmark></IoMdCheckmark>
+                                            <IoMdCheckmark className='text-sky-500' />
                                         </div>
                                         <div className="service-detail-description">
                                             <h5 className='text-sm font-bold mb-3'>App Development</h5>
@@ -37,9 +37,9 @@ const ServiceOffers = () => {
                                     </div>
                                 </div>
                                 <div className="sm:flex lg:my-10">
-                                    <div className="service-detail flex">
+                                    <div className="service_offer flex pb-4">
                                         <div className="service-detail-icon me-2 mt-[3px]">
-                                            <IoMdCheckmark></IoMdCheckmark>
+                                            <IoMdCheckmark className='text-sky-500' />
                                         </div>
                                         <div className="service-detail-description">
                                             <h5 className='text-sm font-bold mb-3'>Web Designing</h5>
@@ -47,9 +47,9 @@ const ServiceOffers = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="service-detail flex">
+                                    <div className="service_offer flex pb-4">
                                         <div className="service-detail-icon me-2 mt-[3px]">
-                                            <IoMdCheckmark></IoMdCheckmark>
+                                            <IoMdCheckmark className='text-sky-500' />
                                         </div>
                                         <div className="service-detail-description">
                                             <h5 className='text-sm font-bold mb-3'>Wordpress Development</h5>
@@ -59,9 +59,9 @@ const ServiceOffers = () => {
                                     </div>
                                 </div>
                                 <div className="sm:flex mb-10">
-                                    <div className="service-detail flex">
+                                    <div className="service_offer flex pb-4">
                                         <div className="service-detail-icon me-2 mt-[3px]">
-                                            <IoMdCheckmark></IoMdCheckmark>
+                                            <IoMdCheckmark className='text-sky-500' />
                                         </div>
                                         <div className="service-detail-description">
                                             <h5 className='text-sm font-bold mb-3'>Graphic Designing</h5>
@@ -69,9 +69,9 @@ const ServiceOffers = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="service-detail flex">
+                                    <div className="service_offer flex pb-4">
                                         <div className="service-detail-icon me-2 mt-[3px]">
-                                            <IoMdCheckmark></IoMdCheckmark>
+                                            <IoMdCheckmark className='text-sky-500' />
                                         </div>
                                         <div className="service-detail-description">
                                             <h5 className='text-sm font-bold mb-3'>Digital Marketing</h5>

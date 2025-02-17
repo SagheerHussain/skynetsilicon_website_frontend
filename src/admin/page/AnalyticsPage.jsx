@@ -1,10 +1,12 @@
 import React from 'react';
-import { Layout } from "../components/index";
+import { Analytics, Layout } from "../components/index";
 
 const AnalyticsPage = () => {
     return (
         <>
-            <Layout></Layout>
+            <Layout>
+                <Analytics />
+            </Layout>
         </>
     )
 }
