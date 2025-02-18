@@ -96,13 +96,13 @@ const Sidebar = () => {
                                             <ListItemIcon className='-mr-4'>
                                                 <GoDot className='text-white' />
                                             </ListItemIcon>
-                                            <Link className='text-white text-lg' to={``}>Add Portfolio</Link>
+                                            <Link className='text-white text-lg' to={`/dashboard/add-portfolio`}>Add Portfolio</Link>
                                         </ListItemButton>
                                         <ListItemButton sx={{ pl: 4 }}>
                                             <ListItemIcon className='-mr-4'>
                                                 <GoDot className='text-white text-lg' />
                                             </ListItemIcon>
-                                            <Link className='text-white' to={``}>View Portfolio</Link>
+                                            <Link className='text-white' to={`/dashboard/view-portfolio`}>View Portfolio</Link>
                                         </ListItemButton>
                                     </List>
                                 </Collapse>
@@ -125,13 +125,13 @@ const Sidebar = () => {
                                             <ListItemIcon className='-mr-4'>
                                                 <GoDot className='text-white' />
                                             </ListItemIcon>
-                                            <Link className='text-white text-lg' to={``}>Add Category</Link>
+                                            <Link className='text-white text-lg' to={`/dashboard/add-category`}>Add Category</Link>
                                         </ListItemButton>
                                         <ListItemButton sx={{ pl: 4 }}>
                                             <ListItemIcon className='-mr-4'>
                                                 <GoDot className='text-white' />
                                             </ListItemIcon>
-                                            <Link className='text-white text-lg' to={``}>View Categories</Link>
+                                            <Link className='text-white text-lg' to={`/dashboard/view-category`}>View Categories</Link>
                                         </ListItemButton>
                                     </List>
                                 </Collapse>

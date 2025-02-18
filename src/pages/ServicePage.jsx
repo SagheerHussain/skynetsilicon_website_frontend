@@ -26,9 +26,11 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
     // Service Api Call
     useEffect(() => {
         let isMounted = true;
+
         (async () => {
             setApiLoading(true);
             setIsClick(false);
+            console.log(category)
             try {
                 const response = await fetch(`https://skynetsilicon-website-backend.vercel.app/api/services/category/${category}`);
                 const data = await response.json();

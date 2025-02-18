@@ -84,6 +84,10 @@ const AddService = () => {
                 text: "Successfully Add New Service",
             });
 
+            setTimeout(() => {
+                navigate("/dashboard/view-service");
+            }, 1500);
+
         } catch (error) {
             console.error("Error adding service:", error);
             setLoading(false);

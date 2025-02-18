@@ -6,6 +6,11 @@ import Analytics from "./analytics/Analytics";
 import AddService from "./services/AddService";
 import ViewService from "./services/ViewService";
 import EditService from "./services/EditService";
+import AddPortfolio from "./portfolio/AddPortfolio"
+import ViewPortfolio from "./portfolio/ViewPortfolio";
+import EditPortfolio from "./portfolio/EditPortfolio";
+import AddCategory from "./category/AddCategory";
+import ViewCategory from "./category/ViewCategory";
 
 export {
     Footer,
@@ -15,5 +20,10 @@ export {
     Analytics,
     AddService,
     ViewService,
-    EditService
+    EditService,
+    AddPortfolio,
+    ViewPortfolio,
+    EditPortfolio,
+    AddCategory,
+    ViewCategory
 }

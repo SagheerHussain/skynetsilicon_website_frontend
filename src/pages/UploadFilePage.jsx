@@ -142,7 +142,6 @@ const UploadFilePage = () => {
                     )}
                 </div>
             </div>
-
         </>
     );
 };

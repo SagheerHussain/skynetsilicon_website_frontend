@@ -51,7 +51,7 @@ const EditService = () => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/category");
+                const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/category");
                 const data = await response.json();
                 setCategories(data);
             } catch (error) {
@@ -106,7 +106,7 @@ const EditService = () => {
         setLoading(true);
 
         try {
-            const response = await fetch(`http://localhost:5000/api/services/update/${id}`, {
+            const response = await fetch(`https://skynetsilicon-website-backend.vercel.app/api/services/update/${id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -120,6 +120,9 @@ const EditService = () => {
                 icon: "success",
                 text: "Service Updated Successfully!",
             });
+            setTimeout(() => {
+                navigate("/dashboard/view-service");
+            }, 1500);
         } catch (error) {
             console.error("Error updating service:", error);
             setLoading(false);
@@ -128,7 +131,7 @@ const EditService = () => {
 
     return (
         <Layout>
-            <section id="editService" className="h-full py-6">
+            <section id="editService" className={`${isFetching ? "h-[88vh]" : "h-full"} py-6`}>
                 <div className="container py-4">
                     <h1 className="text-[#fff] text-4xl font-bold mb-5">Edit Service</h1>
 

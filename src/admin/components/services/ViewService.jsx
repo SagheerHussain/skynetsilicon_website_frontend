@@ -102,7 +102,6 @@ const ViewService = () => {
     return (
         <>
             <Layout>
-
                 <section id="viewService" className={`py-6 ${loading ? "h-[88vh]" : "h-full"}`}>
                     <div className="container">
                         <h1 className="text-white mb-5 text-4xl font-bold">View Services</h1>
