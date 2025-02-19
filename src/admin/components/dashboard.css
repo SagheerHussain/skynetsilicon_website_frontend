@@ -1,0 +1,17 @@
+.MuiSvgIcon-root {
+    fill: #fff !important;
+}
+.MuiDataGrid-row--borderBottom {
+    background: #18181b !important;
+}
+.css-1r7svyj-MuiDataGrid-root .MuiDataGrid-columnSeparator,
+.css-1r7svyj-MuiDataGrid-root .MuiDataGrid-columnSeparator--sideRight {
+    display: none !important;
+}
+.css-1r7svyj-MuiDataGrid-root {
+    border: 1px solid #c0c0c030 !important;
+    border-radius: 0% !important;
+}
+.css-11cfq65-MuiTablePagination-displayedRows {
+    color: #fff !important;
+}

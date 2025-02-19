@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navbar, Footer, Sidebar } from '../index';
+import "../dashboard.css";
 
 const Layout = ({ children }) => {
     return (
