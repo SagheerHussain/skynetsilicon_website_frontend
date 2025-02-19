@@ -35,7 +35,7 @@ const HeaderOverlay = React.memo(() => {
               key={_id}
               src={`${src}`}
               alt="Portfolio Image"
-              className="w-full p-1 rounded-lg"
+              className="p-1 rounded-lg object-cover object-left-top w-[600px] h-[400px]"
               loading="lazy" // Lazy loading for performance boost
             />
           ))}

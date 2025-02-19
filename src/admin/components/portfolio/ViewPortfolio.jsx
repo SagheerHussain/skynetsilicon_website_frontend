@@ -79,7 +79,7 @@ const ViewPortfolio = () => {
     return (
         <>
             <Layout>
-                <section id="viewService" className={`py-6 ${loading ? "h-[88vh]" : "h-full"}`}>
+                <section id="viewService" className={`py-6 ${loading ? "h-[88vh]" : "h-full"} min-h-[88vh]`}>
                     <div className="container">
                         <h1 className="text-white mb-5 text-4xl font-bold">View Portfolio</h1>
 

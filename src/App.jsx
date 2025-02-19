@@ -5,7 +5,7 @@ import "./App.css";
 import ComingSoon from './components/ComingSoon';
 import PreLoader from './components/PreLoader';
 import { AnalyticsPage } from './admin/page/page';
-import { AddService, ViewService, EditService, AddPortfolio, ViewPortfolio, EditPortfolio, AddCategory, ViewCategory } from './admin/components/index';
+import { AddService, ViewService, EditService, AddPortfolio, ViewPortfolio, EditPortfolio, AddCategory, ViewCategory, Login, Register, ProtectedRoute } from './admin/components/index';
 import EditCategory from './admin/components/category/EditCategory';
 
 function App() {
@@ -29,16 +29,22 @@ function App() {
 
 
         {/* Admin Routes */}
-        <Route path='/dashboard' element={<AnalyticsPage />} />
-        <Route path='/dashboard/add-service' element={<AddService />} />
-        <Route path='/dashboard/view-services' element={<ViewService />} />
-        <Route path='/dashboard/edit-service/:id' element={<EditService />} />
-        <Route path='/dashboard/add-portfolio' element={<AddPortfolio />} />
-        <Route path='/dashboard/view-portfolio' element={<ViewPortfolio />} />
-        <Route path='/dashboard/edit-portfolio/:id' element={<EditPortfolio />} />
-        <Route path='/dashboard/add-category' element={<AddCategory />} />
-        <Route path='/dashboard/view-category' element={<ViewCategory />} />
-        <Route path='/dashboard/edit-category/:id' element={<EditCategory />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path='/dashboard' element={<AnalyticsPage />} />
+          <Route path='/dashboard/add-service' element={<AddService />} />
+          <Route path='/dashboard/view-services' element={<ViewService />} />
+          <Route path='/dashboard/edit-service/:id' element={<EditService />} />
+          <Route path='/dashboard/add-portfolio' element={<AddPortfolio />} />
+          <Route path='/dashboard/view-portfolio' element={<ViewPortfolio />} />
+          <Route path='/dashboard/edit-portfolio/:id' element={<EditPortfolio />} />
+          <Route path='/dashboard/add-category' element={<AddCategory />} />
+          <Route path='/dashboard/view-category' element={<ViewCategory />} />
+          <Route path='/dashboard/edit-category/:id' element={<EditCategory />} />
+        </Route>
+
+        {/* Authentication */}
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
 
       </Routes>
     </>

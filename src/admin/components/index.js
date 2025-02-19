@@ -11,6 +11,9 @@ import ViewPortfolio from "./portfolio/ViewPortfolio";
 import EditPortfolio from "./portfolio/EditPortfolio";
 import AddCategory from "./category/AddCategory";
 import ViewCategory from "./category/ViewCategory";
+import Login from "./auth/Login";
+import Register from "./auth/Register";
+import ProtectedRoute from "./auth/ProtectedRoute";
 
 export {
     Footer,
@@ -25,5 +28,8 @@ export {
     ViewPortfolio,
     EditPortfolio,
     AddCategory,
-    ViewCategory
+    ViewCategory,
+    Login,
+    Register,
+    ProtectedRoute
 }
