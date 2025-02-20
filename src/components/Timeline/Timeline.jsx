@@ -35,7 +35,7 @@ const Timeline = () => {
                                             <p>Skynet Silicon delivers dynamic, high-performance React.js solutions tailored to your business goals. Our expert team builds scalable, component-based user interfaces that provide a seamless experience across all devices. We specialize in creating fast, responsive, and interactive web applications that boost engagement and streamline workflows. With cutting-edge technology and continuous support, we ensure your React.js projects evolve with your business needs.</p>
                                         </div>
                                         <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                            <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="React Js Development" color='hover:text-black' bgColor='bg-gradient-to-r from-[#9be8fb] to-[#26d2fc]' />
+                                            <Button link='/contact' className="primary-btn py-0 transition-all duration-100 linear uppercase" label="React Js Development" color='hover:text-black' bgColor='bg-gradient-to-r from-[#9be8fb] to-[#26d2fc]' />
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@ const Timeline = () => {
                                             <p>Skynet Silicon provides powerful, server-side solutions using Node.js to drive your backend development needs. We deliver secure, fast, and scalable APIs and server applications that integrate seamlessly with your front-end and business operations. Our team ensures optimized performance and reliability, making your Node.js applications the backbone of your company's growth with consistent support and maintenance.</p>
                                         </div>
                                         <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                            <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Node Js Development" color='hover:text-white' bgColor='bg-gradient-to-r from-[#a0fd8b] to-[#339d1b]' />
+                                            <Button link='/contact' className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Node Js Development" color='hover:text-white' bgColor='bg-gradient-to-r from-[#a0fd8b] to-[#339d1b]' />
                                         </div>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@ const Timeline = () => {
                                             <p>Skynet Silicon creates fully customized, high-performing WordPress websites that precisely complement your brand and company objectives. Our professionals craft smooth, intuitive user experiences that increase interaction and conversions. We guarantee that your WordPress website stays scalable, safe, and optimized as your company expands with strong security features and continuous support.</p>
                                         </div>
                                         <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                            <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Wordpress Development" color='hover:text-white' bgColor='bg-gradient-to-r from-[#92bfff] to-[#105fc7]' />
+                                            <Button link='/contact' className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Wordpress Development" color='hover:text-white' bgColor='bg-gradient-to-r from-[#92bfff] to-[#105fc7]' />
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@ const Timeline = () => {
                                             <p>Skynet Silicon offers fully customized, feature-rich Android applications designed to meet your specific business objectives. Our developers craft user-friendly, secure, and scalable apps that enhance customer engagement and deliver outstanding performance. Whether you're building an e-commerce app, a social platform, or a productivity tool, we guarantee a solution optimized for success on the Android platform with ongoing updates and robust support.</p>
                                         </div>
                                         <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                            <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Android Development" color='hover:text-black' bgColor='bg-gradient-to-r from-[#defe87] to-[#8fc204]' />
+                                            <Button link='/contact' className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Android Development" color='hover:text-black' bgColor='bg-gradient-to-r from-[#defe87] to-[#8fc204]' />
                                         </div>
                                     </div>
                                 </div>

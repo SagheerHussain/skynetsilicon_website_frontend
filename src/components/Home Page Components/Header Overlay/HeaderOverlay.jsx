@@ -17,7 +17,7 @@ const HeaderOverlay = React.memo(() => {
   ];
 
   // Three Columns for Image Overlays
-  const heroImagesOverlayColumn = [portfolio, portfolio.reverse(), portfolio];
+  const heroImagesOverlayColumn = [portfolio.slice(0, 5), portfolio.slice(6, 10), portfolio.slice(3, 7)];
 
   return (
     <div className="hero_section_images_overlays flex md:flex-row flex-col scale-125">
