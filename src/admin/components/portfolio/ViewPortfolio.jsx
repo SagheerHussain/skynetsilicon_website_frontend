@@ -124,7 +124,7 @@ const ViewPortfolio = () => {
 
         if (result.isConfirmed) {
             try {
-                await fetch(`http://localhost:5000/api/portfolio/delete-multiple?ids=${selectedRows.join(',')}`, {
+                await fetch(`https://skynetsilicon-website-backend.vercel.app/api/portfolio/delete-multiple?ids=${selectedRows.join(',')}`, {
                     method: 'DELETE',
                 });
 
