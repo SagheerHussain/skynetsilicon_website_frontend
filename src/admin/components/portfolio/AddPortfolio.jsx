@@ -21,7 +21,7 @@ const AddPortfolio = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault(); // Prevent the default form submission
-
+    
         if (!file || !title || !description || !category) {
             Swal.fire({
                 icon: "error",
@@ -29,34 +29,33 @@ const AddPortfolio = () => {
             });
             return;
         }
-
+    
         const formData = new FormData();
-        formData.append("file", file);
+        formData.append("image", file); // Ensure key matches backend `upload.single("image")`
         formData.append("title", title);
         formData.append("description", description);
         formData.append("category", category);
-
+    
         try {
             const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/portfolio", {
                 method: "POST",
-                headers: {},
-                body: formData, // Send form data as the request body
+                body: formData, // ✅ Correct way to send FormData
             });
-
+    
             const data = await response.json();
             console.log("Response from backend:", data);
             
             if (response.ok) {
                 Swal.fire({
                     icon: "success",
-                    text: "Successfully Add Portfolio",
+                    text: "Successfully Added Portfolio",
                 });
                 setFile(null);
                 setTitle("");
                 setDescription("");
                 setCategory("");
                 setTimeout(() => {
-                    navigate('/dashboard/view-portfolio')
+                    navigate('/dashboard/view-portfolio');
                 }, 1500);
             } else {
                 Swal.fire({
@@ -68,6 +67,7 @@ const AddPortfolio = () => {
             console.error("Error uploading file:", error);
         }
     };
+    
 
     // Categories
     useEffect(() => {
@@ -113,6 +113,8 @@ const AddPortfolio = () => {
                                     <input
                                         id="fileUpload"
                                         type="file"
+                                        name='image'
+                                        accept="image/*"
                                         onChange={handleFileChange}
                                         className="hidden bg-transparent border-zinc-800 placeholder:text-zinc-300"
                                     />

@@ -88,8 +88,12 @@ const EditPortfolio = () => {
                             </label>
                         </div>
                         {portfolio && (
-                            <img src={`https://skynetsilicon-website-backend.vercel.app/uploads/${portfolio.src}`} alt="Portfolio" className="mt-4 w-40 h-40 object-cover" />
+                            <img src={`${portfolio.src}`} alt="Portfolio" className="mt-4 w-40 h-40 object-cover" />
                         )}
+
+                        <label className="text-sm text-zinc-300 mb-2 mt-4">Previous Category</label>
+                        <input type="text" className='form-control bg-transparent border-[#ffffff20] rounded-none text-zinc-500' disabled value={portfolio?.category.name} />
+
                         <label className="text-sm text-zinc-300 mb-2 mt-4">Category*</label>
                         <select name="category" required onChange={(e) => setCategory(e.target.value)} className="text-zinc-300 bg-transparent border-zinc-800 form-select w-full rounded-none focus:shadow-none " id="">
                             <option hidden>Select Category</option>
