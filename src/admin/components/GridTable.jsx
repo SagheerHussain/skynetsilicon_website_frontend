@@ -7,8 +7,8 @@ const GridTable = ({ title, handleBulkDelete, selectedRows, rows, columns, setSe
     return (
         <>
             <Layout>
-                <section id="table" className='h-[88vh]'>
-                    <Box className="w-[85vw] p-4">
+                <section id="table" className='h-full min-h-[88vh]'>
+                    <Box className="lg:w-[75vw] xl:w-[80vw] 2xl:w-[85vw] p-4">
                         {/* Bulk Delete Button */}
                         {selectedRows.length > 0 && (
                             <div className="flex justify-end mb-2">
