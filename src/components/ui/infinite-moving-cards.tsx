@@ -11,7 +11,10 @@ export const InfiniteMovingCards = ({
 }: {
   items: {
     src: string;
+    name: string;
+    tagline: string,
     company: string;
+    quote: string;
     id: Number;
   }[];
   direction?: "left" | "right";
@@ -86,14 +89,31 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <li
-            className={`relative border-slate-700 px-8 w-[300px] ${itemClass}`}
-            key={item.src}
-          >
-            <img src={item.src} className="max-w-full " alt="" loading="lazy" />
-            {item.company && <h4 className="font-medium text-white">{item.company}</h4>}
-          </li>
+          !item.name ? <>
+            <li
+              className={`relative border-slate-700 px-8 w-[300px] ${itemClass}`}
+              key={item.src}
+            >
+              <img src={item.src} className="max-w-full " alt="" loading="lazy" />
+              {item.company && <h4 className="font-medium text-zinc-300">{item.company}</h4>}
+            </li>
+          </>
+            :
+            <li
+              key={item.src}
+              className={`${itemClass} relative p-6 max-w-lg mx-auto text-white overflow-hidden bg-[#4c86d21a]`}
+            >
+              <div className="relative flex items-center justify-between">
+                <div className="company_info">
+                  <h3 className="text-zinc-100">{item.name}</h3>
+                  <h4 className="text-sm text-zinc-400">{item.tagline}</h4>
+                </div>
+                <img src={item.src} className="max-w-full " alt="" loading="lazy" />
+              </div>
+              <blockquote className="text-zinc-100 pt-3">"{item.quote}"</blockquote>
+            </li>
         ))}
+
       </ul>
     </div>
   );

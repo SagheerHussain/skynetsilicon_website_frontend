@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style.css"
-import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, Contact, Footer, CompanyLocation, PricingObjectives, Subscribe, TopBrands } from "../components/index";
+import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, Contact, Footer, CompanyLocation, PricingObjectives, Subscribe, TopBrands, Testimonials } from "../components/index";
 import ScrollToTop from "../components/ScrollToTop";
 import InfiniteMovingBrands from '../components/Brands/InfiniteMovingBrands';
 import { heroBrands } from "../components/brandItems";
@@ -39,6 +39,7 @@ const HomePage = ({ setLoading }) => {
               {/* <CaseStudies />
               <ServiceTab /> */}
               <PricingObjectives />
+              <Testimonials />
               <Subscribe />
               <CompanyLocation />
               <Contact />

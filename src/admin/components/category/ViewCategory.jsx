@@ -75,7 +75,7 @@ const ViewCategory = () => {
 
         if (result.isConfirmed) {
             try {
-                await fetch(`http://localhost:5000/api/category/delete-multiple?ids=${selectedRows.join(',')}`, {
+                await fetch(`https://skynetsilicon-website-backend.vercel.app/api/category/delete-multiple?ids=${selectedRows.join(',')}`, {
                     method: 'DELETE',
                 });
 

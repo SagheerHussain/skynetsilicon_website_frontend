@@ -14,6 +14,8 @@ import ViewCategory from "./category/ViewCategory";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
 import ProtectedRoute from "./auth/ProtectedRoute";
+import ForgetPassword from "./auth/ForgetPassword";
+import ResetPassword from "./auth/ResetPassword";
 
 export {
     Footer,
@@ -31,5 +33,7 @@ export {
     ViewCategory,
     Login,
     Register,
-    ProtectedRoute
+    ProtectedRoute,
+    ForgetPassword,
+    ResetPassword
 }

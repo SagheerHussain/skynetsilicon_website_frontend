@@ -124,7 +124,7 @@ const ViewService = () => {
 
         if (result.isConfirmed) {
             try {
-                await fetch(`http://localhost:5000/api/services/delete-multiple?ids=${selectedRows.join(',')}`, {
+                await fetch(`https://skynetsilicon-website-backend.vercel.app/api/services/delete-multiple?ids=${selectedRows.join(',')}`, {
                     method: 'DELETE',
                 });
 

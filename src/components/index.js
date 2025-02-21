@@ -32,6 +32,7 @@ import ServiceDetails from "./Service Page Component/ServiceDetails";
 import ScrollToTop from "./ScrollToTop";
 import ValueAddition from "./About Us Page Components/ValueAddition";
 import TopBrands from "./Top Brands/TopBrands";
+import Testimonials from "./Testimonials/Testimonials";
 import WhyWeUse from "./Service Page Component/WhyWeUse";
 import WhyUs from "./Service Page Component/WhyUs";
 
@@ -70,6 +71,7 @@ export {
     ScrollToTop,
     ValueAddition,
     TopBrands,
+    Testimonials,
     WhyWeUse,
     WhyUs,
 }

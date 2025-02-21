@@ -5,7 +5,7 @@ import "./App.css";
 import ComingSoon from './components/ComingSoon';
 import PreLoader from './components/PreLoader';
 import { AnalyticsPage } from './admin/page/page';
-import { AddService, ViewService, EditService, AddPortfolio, ViewPortfolio, EditPortfolio, AddCategory, ViewCategory, Login, Register, ProtectedRoute } from './admin/components/index';
+import { AddService, ViewService, EditService, AddPortfolio, ViewPortfolio, EditPortfolio, AddCategory, ViewCategory, Login, Register, ProtectedRoute, ForgetPassword, ResetPassword } from './admin/components/index';
 import EditCategory from './admin/components/category/EditCategory';
 
 function App() {
@@ -44,6 +44,8 @@ function App() {
 
         {/* Authentication */}
         <Route path='/login' element={<Login />} />
+        <Route path='/forget-password' element={<ForgetPassword />} />
+        <Route path='/reset-password/:token' element={<ResetPassword />} />
         <Route path='/register' element={<Register />} />
 
       </Routes>
