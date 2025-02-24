@@ -1,11 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { BreadCrumb, CategorySelection } from '../index';
 import { Space, Switch } from 'antd';
 import "./css/pricingPackage.css"
 import { pricing } from '../Pricing';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { FormControl, FormControlLabel, Radio, RadioGroup, useMediaQuery } from '@mui/material';
-import { PackageTabs } from './PackageTabs';
+import { useMediaQuery } from '@mui/material';
+import { useQuery } from '@tanstack/react-query';
+
+
+// Fetching
+const fetchCategories = async () => {
+    const response = await fetch("https://skynetsiliconserver.vercel.app/api/category");
+    if (!response.ok) {
+        throw new Error("Categories could not fetch");
+    }
+    return response.json();
+};
 
 const PricingPackage = ({
     minHeight = "h-full",
@@ -14,10 +24,16 @@ const PricingPackage = ({
     ...props
 }) => {
 
+    // React Query
+    const { data: categories, isLoading, error } = useQuery({
+        queryKey: ['categories'],
+        queryFn: fetchCategories,
+        staleTime: 300000,
+      });
+
     // State Variables
     const [pricingFeatures, setPricingFeatures] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("Web Development");
-    const [categories, setCategories] = useState();
 
     const { category } = useParams();
 
@@ -42,19 +58,10 @@ const PricingPackage = ({
         setPricingFeatures(filterPricing.features);
     }, [category, location.pathname]);
 
-    // Fetch All Categories
+
     useEffect(() => {
-        (async () => {
-            try {
-                const response = await fetch("https://skynetsiliconserver.vercel.app/api/category");
-                if (!response.ok) throw new Error("Categories could not fetch");
-                const data = await response.json();
-                setCategories(data);
-            } catch (error) {
-                console.log(error);
-            }
-        })()
-    }, [])
+        fetchCategories();
+    }, [fetchCategories]);
 
     // Calculate Grand Total
     const totalPrize = pricingFeatures?.reduce((acc, currVal) => {
@@ -98,7 +105,7 @@ const PricingPackage = ({
                             <div className="pricing_package_select_feature min-w-full relative bg-gradient-to-r from-[rgba(15,73,144,1)] to-[rgba(70,35,134,1)] p-4 mb-4 rounded-[25px]">
                                 <CategorySelection onCategoryChange={handleCategory} selectedCategory={selectedCategory} categories={categories} />
                             </div>
-                            
+
                             <div className="pricing_package_check_list  bg-[#131848] py-10 px-sm-14 px-10">
 
                                 <h2 className='text-white text-3xl font-bold mb-14'><span className='text-[#0ad5f1]'>{selectedCategory}</span> Cost Calculator</h2>

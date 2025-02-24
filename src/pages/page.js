@@ -3,9 +3,7 @@ import AboutPage from "./AboutPage";
 import ServicePage from "./ServicePage";
 import ContactPage from "./ContactPage";
 import PricingPage from "./PricingPage";
-import UploadFilePage from "./UploadFilePage";
-import UploadService from "./UploadService";
-import UploadCategory from "./UploadCategory";
+import ProjectsPage from "./ProjectsPage";
 
 export {
     HomePage,
@@ -13,7 +11,5 @@ export {
     ServicePage,
     ContactPage,
     PricingPage,
-    UploadFilePage,
-    UploadService,
-    UploadCategory
+    ProjectsPage
 }

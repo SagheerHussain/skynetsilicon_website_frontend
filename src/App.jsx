@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { AboutPage, HomePage, ServicePage, ContactPage, UploadCategory, UploadFilePage, UploadService, PricingPage } from "./pages/page";
+import { AboutPage, HomePage, ServicePage, ContactPage, PricingPage, ProjectsPage } from "./pages/page";
 import "./App.css";
 import ComingSoon from './components/ComingSoon';
 import PreLoader from './components/PreLoader';
@@ -22,9 +22,7 @@ function App() {
         <Route path='/service/:category' element={<ServicePage setApiLoading={setApiLoading} apiLoading={apiLoading} />} />
         <Route path='/contact' element={<ContactPage setLoading={setLoading} />} />
         <Route path='/pricing-package/:category' element={<PricingPage />} />
-        <Route path='/upload-portfolio' element={<UploadFilePage />} />
-        <Route path='/upload-service' element={<UploadService />} />
-        <Route path='/upload-category' element={<UploadCategory />} />
+        <Route path='/projects' element={<ProjectsPage />} />
         <Route path='*' element={<ComingSoon />} />
 
 

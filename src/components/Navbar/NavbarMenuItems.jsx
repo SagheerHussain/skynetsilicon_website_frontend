@@ -36,7 +36,7 @@ const NavbarMenuItems = ({
               href="#"
               onClick={() => handleLinkClick("services")}
               className={`active_menu_link nav_menu_link ms-[2.5rem] lg:ms-0 text-[#eee] py-[.7rem] lg:py-[.7rem] text-center flex items-center text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]`}
-              style={{ "--i": "0.05s" }}
+              style={{ "--i": "0.1s" }}
             >
               Services <MdOutlineKeyboardArrowDown className={`ms-3 transition-all duration-300 ease-in-out ${activeLink === "services" && "rotate-[-180deg]"}`} />
             </a>
@@ -106,10 +106,13 @@ const NavbarMenuItems = ({
             <a href="#" style={{ "--i": "0.3s" }} className='text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]'>Case Studies</a>
           </li> */}
           <li>
-            <Link to="/pricing-package/web-development" style={{ "--i": "0.35s" }} className='nav_menu_link text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]'>Pricing</Link>
+            <Link to="/projects" style={{ "--i": "0.15s" }} className='nav_menu_link text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]'>Projects</Link>
           </li>
           <li>
-            <Link to="/contact" style={{ "--i": "0.35s" }} className='nav_menu_link text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]'>Contact</Link>
+            <Link to="/pricing-package/web-development" style={{ "--i": "0.2s" }} className='nav_menu_link text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]'>Pricing</Link>
+          </li>
+          <li>
+            <Link to="/contact" style={{ "--i": "0.25s" }} className='nav_menu_link text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]'>Contact</Link>
           </li>
           <div className="quote mt-10">
             <Button link="/contact" className="text-white secondary-button" label="Request a Quote" />

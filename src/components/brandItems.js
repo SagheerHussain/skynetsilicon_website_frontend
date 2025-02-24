@@ -4,10 +4,6 @@ export const heroBrands = [
         src: "/Images/Brands/1.png"
     },
     {
-        id: 2,
-        src: "/Images/Brands/2.png"
-    },
-    {
         id: 3,
         src: "/Images/Brands/3.png"
     },
@@ -42,11 +38,6 @@ export const workingBrands = [
         id: 1,
         src: "/Images/Brands/remove bg brands/1.png",
         company: "MLE Energy Efficient"
-    },
-    {
-        id: 2,
-        src: "/Images/Brands/remove bg brands/2.png",
-        company: "Skynet Silicon"
     },
     {
         id: 3,

@@ -22,6 +22,10 @@ import Timeline from "./Timeline/Timeline";
 import PreLoader from "./PreLoader";
 import PricingObjectives from "./Pricing Objectives/PricingObjectives";
 import PricingPackage from "./Pricing Packages Page Components/PricingPackage";
+import ProjectHeader from "./Projects/ProjectHeader";
+import Projects from "./Projects/Projects";
+import ProjectCard from "./Projects/ProjectCard";
+import ReadyToStartProject from "./ReadyToStartProject";
 import ServiceTab from "./Features/ServiceTab";
 import Subscribe from "./Subscribe/Subscribe";
 import SkynetMean from "./About Us Page Components/SkynetMean";
@@ -55,12 +59,15 @@ export {
     ModalVideo,
     Navbar,
     NavbarMenuItems,
-    ShortCompanyInfo,
-    Services,
-    Timeline,
     PreLoader,
     PricingObjectives,
     PricingPackage,
+    ProjectHeader,
+    Projects,
+    ProjectCard,
+    ReadyToStartProject,
+    ShortCompanyInfo,
+    Services,
     ServiceTab,
     Subscribe,
     SkynetMean,
@@ -69,9 +76,10 @@ export {
     ServiceHeader,
     ServiceDetails,
     ScrollToTop,
-    ValueAddition,
+    Timeline,
     TopBrands,
     Testimonials,
+    ValueAddition,
     WhyWeUse,
     WhyUs,
 }

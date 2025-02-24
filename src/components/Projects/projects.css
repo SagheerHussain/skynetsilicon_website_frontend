@@ -1,0 +1,10 @@
+.featured-project__headline  {
+    z-index: 99999 !important;
+}
+.featured-project__headline .is-char {
+    transition: transform .35s cubic-bezier(.3,.86,.36,.95);
+    transform: translateY(150%);
+}
+.feature_project_card:hover .featured-project__headline .is-char {
+    transform: translateY(0%);
+}
