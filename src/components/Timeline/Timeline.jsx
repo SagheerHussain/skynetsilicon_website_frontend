@@ -23,41 +23,25 @@ const Timeline = () => {
                         </div>
                         <div className="lg:w-1/2 w-full">
                             <div className="timeline_right_section">
-                                <div className="timeline_card_react timeline_card relative z-[9] sm:flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#c6eff9] to-[#38d5fc] py-5 sm:border-l-[6px] sm:border-[#61dbfb] cursor-pointer">
+                                <div className="timeline_card_react timeline_card relative z-[9] sm:flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#c6eff9] to-[#38d5fc] py-5 sm:border-l-[6px] sm:border-[#bceaf7] cursor-pointer">
                                     <div className="flex justify-center">
-                                        <img src="/Images/react.png" className='sm:-ms-20 sm:me-10 sm:mb-0 mb-[1.5rem] img-fluid max-w-52' alt="" />
+                                        <img src="/Images/mern.png" className='rotate-[90deg] sm:-ms-14 sm:me-10 sm:mb-0 mb-[1.5rem] img-fluid max-w-52' alt="" />
                                     </div>
                                     <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
                                         <div className="timeline_card_title">
-                                            <h3 className='text-3xl font-bold text-[#1b2c5c]'>React Js</h3>
+                                            <h3 className='text-3xl font-bold text-[#1b2c5c]'>Full Stack MERN Development</h3>
                                         </div>
                                         <div className="timeline_card_description py-4 text-sm xl:text-base font-medium text-[#1b2c5c] xl:pr-4">
                                             <p>Skynet Silicon delivers dynamic, high-performance React.js solutions tailored to your business goals. Our expert team builds scalable, component-based user interfaces that provide a seamless experience across all devices. We specialize in creating fast, responsive, and interactive web applications that boost engagement and streamline workflows. With cutting-edge technology and continuous support, we ensure your React.js projects evolve with your business needs.</p>
                                         </div>
                                         <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                            <Button link='/contact' className="primary-btn py-0 transition-all duration-100 linear uppercase" label="React Js Development" color='hover:text-black' bgColor='bg-gradient-to-r from-[#9be8fb] to-[#26d2fc]' />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="timeline_card_node timeline_card relative z-[9] sm:flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#a5ff90] to-[#529f41]  py-5 sm:border-l-[6px] sm:border-[#529f41] cursor-pointer">
-                                    <div className="flex justify-center">
-                                        <img src="/Images/node.png" className='sm:-ms-20 sm:me-10 sm:mb-0 mb-[1.5rem] img-fluid max-w-52' alt="" />
-                                    </div>
-                                    <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
-                                        <div className="timeline_card_title">
-                                            <h3 className='text-3xl text-[#1b2c5c] font-bold'>Node Js</h3>
-                                        </div>
-                                        <div className="timeline_card_description py-4 text-base font-medium xl:pr-4 text-[#1b2c5c]">
-                                            <p>Skynet Silicon provides powerful, server-side solutions using Node.js to drive your backend development needs. We deliver secure, fast, and scalable APIs and server applications that integrate seamlessly with your front-end and business operations. Our team ensures optimized performance and reliability, making your Node.js applications the backbone of your company's growth with consistent support and maintenance.</p>
-                                        </div>
-                                        <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                            <Button link='/contact' className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Node Js Development" color='hover:text-white' bgColor='bg-gradient-to-r from-[#a0fd8b] to-[#339d1b]' />
+                                            <Button link='/contact' className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Full Stack MERN Development" color='hover:text-black' bgColor='bg-gradient-to-r from-[#9be8fb] to-[#26d2fc]' />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="timeline_card_wordpress timeline_card relative z-[9] lg:flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#bdd9ff] to-[#105fc7] py-5 sm:border-l-[6px] sm:border-[#3B7BCE] cursor-pointer">
                                     <div className="flex justify-center">
-                                        <img src="/Images/wordpress.png" className='sm:-ms-20 sm:me-10 sm:mb-0 mb-[1.5rem] img-fluid max-w-52' alt="" />
+                                        <img src="/Images/wordpress.png" className='sm:-ms-14 sm:me-10 sm:mb-0 mb-[1.5rem] img-fluid max-w-52' alt="" />
                                     </div>
                                     <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
                                         <div className="timeline_card_title">
@@ -73,17 +57,17 @@ const Timeline = () => {
                                 </div>
                                 <div className="timeline_card_android timeline_card relative z-[9] lg:flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#e8ffa9] to-[#97c024] py-5 sm:border-l-[6px] sm:border-[#97c024] cursor-pointer">
                                     <div className="flex justify-center">
-                                        <img src="/Images/android.png" className='sm:-ms-20 sm:me-10 sm:mb-0 mb-[1.5rem] img-fluid max-w-52' alt="" />
+                                        <img src="/Images/android.png" className='sm:-ms-14 sm:me-10 sm:mb-0 mb-[1.5rem] img-fluid max-w-52' alt="" />
                                     </div>
                                     <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
                                         <div className="timeline_card_title">
-                                            <h3 className='text-3xl font-bold text-[#1b2c5c]'>Android</h3>
+                                            <h3 className='text-3xl font-bold text-[#1b2c5c]'>Full Stack Mobile App Development</h3>
                                         </div>
                                         <div className="timeline_card_description py-4 text-base font-medium text-[#1b2c5c] xl:pr-4">
                                             <p>Skynet Silicon offers fully customized, feature-rich Android applications designed to meet your specific business objectives. Our developers craft user-friendly, secure, and scalable apps that enhance customer engagement and deliver outstanding performance. Whether you're building an e-commerce app, a social platform, or a productivity tool, we guarantee a solution optimized for success on the Android platform with ongoing updates and robust support.</p>
                                         </div>
                                         <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                            <Button link='/contact' className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Android Development" color='hover:text-black' bgColor='bg-gradient-to-r from-[#defe87] to-[#8fc204]' />
+                                            <Button link='/contact' className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Full Stack App Development" color='hover:text-black' bgColor='bg-gradient-to-r from-[#defe87] to-[#8fc204]' />
                                         </div>
                                     </div>
                                 </div>

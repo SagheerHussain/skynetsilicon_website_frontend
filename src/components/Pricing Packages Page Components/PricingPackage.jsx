@@ -28,7 +28,7 @@ const PricingPackage = ({
     const { data: categories, isLoading, error } = useQuery({
         queryKey: ['categories'],
         queryFn: fetchCategories,
-        staleTime: 300000,
+        staleTime: 1800000,
       });
 
     // State Variables
@@ -94,19 +94,16 @@ const PricingPackage = ({
             <section id='pricing_section' className={`${isClick ? "h-full overflow-hidden" : "min-h-[100%]"} z-[9] bg-[#00042a] relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-[50vh] before:z-[-1] before:bg-gradient-to-r from-[rgba(72,135,231,1)] to-[rgba(135,63,231,1)] masked-image  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[40vh] after:z-[-1] after:bg-gradient-to-r`}>
                 <div className="container max-w-[1280px]">
                     <div className="pricing_package_content pt-[200px] pb-[80px]">
-                        <div className="pricing_package_breadcrumb">
-                            <BreadCrumb page={"Pricing"} category={selectedCategory} />
-                        </div>
                         <div className="pricing_package_intro flex flex-col items-center mt-16 text-center">
                             <h1 className='text-white text-[2.7rem] font-bold'>Transparent Pricing for All Digital Services</h1>
                             <p className='text-white text-xl font-semibold mt-[16px] max-w-[1000px]'>Get transparent pricing for web design, development, and marketing with Skynet Silicon. Estimate costs effortlessly and start your digital journey today</p>
                         </div>
-                        <div className="pricing_package_features_list mt-14 shadow-md">
-                            <div className="pricing_package_select_feature min-w-full relative bg-gradient-to-r from-[rgba(15,73,144,1)] to-[rgba(70,35,134,1)] p-4 mb-4 rounded-[25px]">
+                        <div className="flex lg:flex-row flex-col pricing_package_features_list mt-14 ">
+                            <div className="max-w-full lg:max-w-[25%] lg:me-[2%] max-h-fit pricing_package_select_feature relative bg-gradient-to-r from-[rgba(15,73,144,1)] to-[rgba(70,35,134,1)] p-4 mb-4">
                                 <CategorySelection onCategoryChange={handleCategory} selectedCategory={selectedCategory} categories={categories} />
                             </div>
 
-                            <div className="pricing_package_check_list  bg-[#131848] py-10 px-sm-14 px-10">
+                            <div className="max-w-full lg:w-[75%] pricing_package_check_list  bg-[#131848] py-10 px-sm-14 px-10">
 
                                 <h2 className='text-white text-3xl font-bold mb-14'><span className='text-[#0ad5f1]'>{selectedCategory}</span> Cost Calculator</h2>
 

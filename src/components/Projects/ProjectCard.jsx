@@ -23,14 +23,14 @@ const ProjectCard = ({ project, index }) => {
                     <Link className="relative mb-15 block group group--no-event anchor" to="#">
                         {/* Image container */}
                         <div className="feature_project_img relative rounded transition-transform group-hover:scale-95  duration-500 group-hover:duration-700 overflow-hidden">
-                            <picture className="w-full ">
-                                <img src={project.src} className="w-full max-w-full max-h-[600px] object-top object-cover rounded transition-transform group-hover:scale-110 duration-500 group-hover:duration-1000 " loading="lazy" alt="image description" />
+                            <picture className="w-full">
+                                <img src={project.src} className="w-full px-2 max-w-full max-h-[440px] object-top object-cover rounded transition-transform group-hover:scale-110 duration-500 group-hover:duration-1000 " loading="lazy" alt="image description" />
                                 <div className="overlay group-hover:backdrop-blur-[3px] absolute top-0 left-0 w-full h-0 group-hover:h-[100%] group-hover:bg-[#00000095] transition duration-500 group-hover:duration-1000"></div>
                             </picture>
                         </div>
                         {/* Animated heading */}
                         <h2
-                            className={`text-5xl sm:text-6xl md:text-7xl lg:text-5xl xl:text-6xl 2xl:text-7xl overflow-hidden text-[#04e4ff] m-0 uppercase font-semibold absolute top-1/2 whitespace-nowrap featured-project__headline pointer-events-none ${index % 2 === 0 ? "right-[50%]" : "left-[50%]"}`}
+                            className={`text-5xl sm:text-6xl md:text-7xl lg:text-5xl overflow-hidden text-[#04e4ff] m-0 uppercase font-semibold absolute top-1/2 whitespace-nowrap featured-project__headline pointer-events-none ${index % 2 === 0 ? "right-[50%]" : "left-[50%]"}`}
                             style={{ transform: index % 2 === 0 ? "translate(50%, -50%)" : "translate(-50%, -50%)" }}
                         >
                             <div className="splitter-wrap">
@@ -46,14 +46,6 @@ const ProjectCard = ({ project, index }) => {
                             </div>
                         </h2>
                     </Link>
-                </div>
-
-                <div className="feature_project_branding mt-4">
-                    {
-                        project.tags?.map((tag) => (
-                            <span className='text-white text-sm border-2 rounded-[30px] px-[1.2rem] py-[.6rem] inline-block uppercase me-3 secondary-button overflow-hidden'>{tag}</span>
-                        ))
-                    }
                 </div>
             </div>
         </>

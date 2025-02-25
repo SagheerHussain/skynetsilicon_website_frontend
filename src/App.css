@@ -130,10 +130,6 @@ Buttons Classes Start
     transform: scale(1);
 }
 
-.secondary-button:hover {
-    text-shadow: 4px 4px 6px rgb(32, 167, 219);
-}
-
 /* ############################ 
 ----------  Buttons Classes End ----------
 ############################ */

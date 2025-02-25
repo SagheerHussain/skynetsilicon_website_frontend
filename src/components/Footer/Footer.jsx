@@ -17,7 +17,7 @@ const Footer = ({ className }) => {
                         </div>
                     </div>
                     <div className="row gy-5">
-                        <div className="col-lg-3 col-sm-6">
+                        <div className="col-lg-4 col-sm-6">
                             <div className="footer-menus-links relative ml-[2rem]">
                                 <h3 className='text-white font-bold text-[1.4rem]'>Main Services</h3>
                                 <div className="footer-menus mt-[2rem]">
@@ -29,7 +29,7 @@ const Footer = ({ className }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-sm-6">
+                        <div className="col-lg-4 col-sm-6">
                             <div className="footer-menus-links relative ml-[2rem]">
                                 <h3 className='text-white font-bold text-[1.4rem]'>Apps & Development</h3>
                                 <div className="footer-menus mt-[2rem]">
@@ -42,16 +42,8 @@ const Footer = ({ className }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-sm-6">
-                            <div className="footer-menus-links relative ml-[2rem]">
-                                <h3 className='text-white font-bold text-[1.4rem]'>Location Services</h3>
-                                <div className="footer-menus mt-[2rem]">
-                                    {/* <Link to="/nyc-web-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>NYC Web Design</Link> */}
-                                    <Link to="/location" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Karachi</Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6">
+                       
+                        <div className="col-lg-4 col-sm-6">
                             <div className="footer-menus-links relative ml-[2rem]">
                                 <h3 className='text-white font-bold text-[1.4rem]'>Company</h3>
                                 <div className="footer-menus mt-[2rem]">
@@ -99,9 +91,10 @@ const Footer = ({ className }) => {
                             <div className="footer-extra-menus md:flex items-center text-center">
                                 <p className='text-white text-sm'>©2025 Skynet Silicon. All rights reserved</p>
                                 <div className="footer-extra-menus-links md:ms-8 lg:ms-20">
-                                    <Link to="/privacy-policy" className='text-white me-4 text-sm'>Privacy Policy</Link>
-                                    <Link to="/accessibility" className='text-white me-4 text-sm'>Accessibility</Link>
+                                    {/* <Link to="/privacy-policy" className='text-white me-4 text-sm'>Privacy Policy</Link>
+                                    <Link to="/accessibility" className='text-white me-4 text-sm'>Accessibility</Link> */}
                                     <Link to="tel:+923313908443" className='text-white me-4 text-sm'>Call us at (+92) 3313908443</Link>
+                                    <Link to="mailto:info@skynetsilicon.com" className='text-white me-4 text-sm'>info@skynetsilicon.com</Link>
                                 </div>
                             </div>
                         </div>
