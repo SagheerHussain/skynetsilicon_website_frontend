@@ -14,7 +14,7 @@ const OurTeam = () => {
       <section id="our-team" className="py-10">
         <div className="container">
           <div
-            className={`skynet_founder lg:flex justify-between items-center pb-20`}
+            className={`skynet_founder px-3 lg:flex justify-between items-center pb-20`}
           >
             <div className="founder_description me-[2%] lg:w-[60%]">
               <h1 className="text-[#111] text-[1.5rem] font-bold leading-8">
@@ -66,7 +66,7 @@ const OurTeam = () => {
             </div>
           </div>
           <div
-            className={`skynet_founder flex lg:flex-row flex-col justify-between items-center`}
+            className={`skynet_founder px-3 flex lg:flex-row flex-col justify-between items-center`}
           >
             <div className="founder_image lg:w-[40%] flex lg:justify-start justify-center">
               <img src={sagheerImg} className="rounded-full" alt="" />
@@ -80,31 +80,34 @@ const OurTeam = () => {
                 <span className="text_gradient text-[2.5rem] sm:text-[3rem] pb-4 pt-3 inline-block">
                   Sagheer Hussain{" "}
                 </span>{" "}
-                <br /> Expert Full Stack Developer with 8 Years of Experience
+                <br /> Expert Full Stack Developer with 10 Years of Experience
               </h1>
               <p className="text-[#222] pt-4 text-justify">
-                Highly skilled and experienced WordPress developer with over 8
-                years of expertise in web development. With a deep understanding
-                of custom theme development, plugin creation, and website
-                optimization, he has successfully built and managed a wide range
-                of WordPress-powered websites, from eCommerce stores to business
-                websites and custom web solutions.
+                A highly skilled and innovative full-stack developer with over
+                10 years of experience in building dynamic, high-performance
+                digital solutions. With expertise spanning front-end and
+                back-end development, he has successfully delivered a diverse
+                range of projects, including sleek websites, complex web
+                applications, and scalable mobile apps tailored to meet client
+                needs.His deep passion for technology and creativity drives him
+                to explore the latest advancements, ensuring that every project
+                aligns with modern industry standards. Sagheer excels in turning
+                complex ideas into intuitive, functional, and visually
+                compelling products.
               </p>
               <p className="text-[#222] py-4 text-justify">
-                His extensive experience allows him to craft high-performance,
-                SEO-friendly, and fully responsive websites that meet modern
-                industry standards. Whether it’s WooCommerce customization,
-                performance optimization, API integrations, or security
-                enhancements, Sagheer brings a problem-solving mindset and a
-                detail-oriented approach to every project.
+                As the driving force behind Skynetsilicon, he is committed to
+                delivering precision and excellence in every aspect of
+                development. Whether it’s performance optimization, API
+                integrations, or security enhancements, Sagheer brings a
+                problem-solving mindset and a detail-oriented approach to help
+                businesses thrive in the digital world.
               </p>
               <p className="text-[#222] pb-4 text-justify">
-                Passionate about innovation, he stays updated with the latest
-                WordPress trends and technologies, ensuring that his clients
-                receive cutting-edge solutions that drive business growth. With
-                a reputation for delivering quality work, meeting deadlines, and
+                With a reputation for quality work, meeting deadlines, and
                 providing exceptional client support, Sagheer Hussain is a
-                trusted professional in the world of WordPress development.
+                trusted name in the tech industry — turning visions into
+                reality, one project at a time.
               </p>
             </div>
           </div>

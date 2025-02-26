@@ -95,7 +95,7 @@ function FilterProjects({ isClick }) {
                     width: 300,
                     height: "100vh",
                     padding: "2rem 1rem",
-                    backgroundColor: "#1c0537",
+                    backgroundColor: "#00042a",
                     zIndex: 99999,
                   }}
                   role="presentation"
@@ -112,24 +112,24 @@ function FilterProjects({ isClick }) {
                   </div>
                   <h5 className="fw-bold mb-4 text-white">Filters</h5>
                   <h6 className="text-white mb-4 text-sm">Categories</h6>
-                  {projectsCategories?.map((category, ind) => (
-                    <div className="flex items-center">
+                  {projectsCategories?.map((categ, ind) => (
+                    <div className=" checkbox-wrapper py-3">
                       <input
                         type="checkbox"
-                        value={category}
+                        value={categ}
                         onChange={(e) =>
                           handleFilterProjects(e.target.defaultValue)
                         }
-                        id={category}
-                        className="mt-4 scale-[1.2]"
+                        id={categ}
+                        className=""
                       />
                       <label
-                        htmlFor={0}
-                        className="ms-[2rem] text-zinc-300 scale-[1.2] pt-[1.4rem]"
+                        htmlFor={categ}
+                        className="text-white"
                         key={ind}
-                        style={{ fontSize: "0.85rem" }}
+                        // style={{ fontSize: "0.85rem" }}
                       >
-                        {category
+                        {categ
                           ?.split("-")
                           .map((word) => word[0].toUpperCase() + word.slice(1))
                           .join(" ")}
