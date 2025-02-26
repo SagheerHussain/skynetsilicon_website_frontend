@@ -99,11 +99,11 @@ const PricingPackage = ({
                             <p className='text-white text-xl font-semibold mt-[16px] max-w-[1000px]'>Get transparent pricing for web design, development, and marketing with Skynet Silicon. Estimate costs effortlessly and start your digital journey today</p>
                         </div>
                         <div className="flex lg:flex-row flex-col pricing_package_features_list mt-14 ">
-                            <div className="max-w-full lg:max-w-[25%] lg:me-[2%] max-h-fit pricing_package_select_feature relative bg-gradient-to-r from-[rgba(15,73,144,1)] to-[rgba(70,35,134,1)] p-4 mb-4">
+                            <div className="max-w-full lg:max-w-[25%] rounded-[25px] lg:me-[2%] max-h-fit pricing_package_select_feature relative bg-gradient-to-r from-[rgba(15,73,144,1)] to-[rgba(70,35,134,1)] p-4 mb-4">
                                 <CategorySelection onCategoryChange={handleCategory} selectedCategory={selectedCategory} categories={categories} />
                             </div>
 
-                            <div className="max-w-full lg:w-[75%] pricing_package_check_list  bg-[#131848] py-10 px-sm-14 px-10">
+                            <div className="max-w-full lg:w-[75%] rounded-[25px] pricing_package_check_list  bg-[#131848] py-10 px-sm-14 px-10">
 
                                 <h2 className='text-white text-3xl font-bold mb-14'><span className='text-[#0ad5f1]'>{selectedCategory}</span> Cost Calculator</h2>
 
