@@ -11,6 +11,7 @@ const AddPortfolio = () => {
     const [description, setDescription] = useState("");
     const [categories, setCategories] = useState([]);
     const [portfolio, setPortfolio] = useState([]);
+    const [link, setLink] = useState("");
 
     const navigate = useNavigate();
 
@@ -22,7 +23,7 @@ const AddPortfolio = () => {
     const handleSubmit = async (event) => {
         event.preventDefault(); // Prevent the default form submission
     
-        if (!file || !title || !description || !category) {
+        if (!file || !title || !category || !link) {
             Swal.fire({
                 icon: "error",
                 text: "All Fields Are Required",
@@ -35,6 +36,7 @@ const AddPortfolio = () => {
         formData.append("title", title);
         formData.append("description", description);
         formData.append("category", category);
+        formData.append("link", link);
     
         try {
             const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/portfolio", {
@@ -54,6 +56,7 @@ const AddPortfolio = () => {
                 setTitle("");
                 setDescription("");
                 setCategory("");
+                setLink("");
                 setTimeout(() => {
                     navigate('/dashboard/view-portfolio');
                 }, 1500);
@@ -100,7 +103,7 @@ const AddPortfolio = () => {
     return (
         <>
             <Layout>
-                <section id="addPortfolio" className='h-[88vh]'>
+                <section id="addPortfolio" className='h-[88vh] pb-[3rem]'>
                     <div className="container mx-auto p-4">
                         <div className="bg-zinc-950 shadow-lg rounded-lg p-5 mx-auto">
                             <h2 className="text-xl font-semibold mb-4 text-zinc-300">Upload Files</h2>
@@ -135,8 +138,11 @@ const AddPortfolio = () => {
                                     <label htmlFor="" className="text-sm text-zinc-300 mb-2 mt-4">Title*</label>
                                     <input type="text" name="title" onChange={(e) => setTitle(e.target.value)} placeholder="Portfolio Title" className="mb-4 py-3 form-control w-full rounded-none focus:shadow-none bg-transparent border-zinc-300 placeholder:text-zinc-300 text-white" />
 
-                                    <label htmlFor="" className="text-sm text-zinc-300 mb-2">Description*</label>
+                                    <label htmlFor="" className="text-sm text-zinc-300 mb-2">Description (optional)</label>
                                     <textarea name="description" onChange={(e) => setDescription(e.target.value)} placeholder="Portfolio Description" className="h-[100px] py-3 form-control w-full rounded-none focus:shadow-none  bg-transparent border-zinc-300 placeholder:text-zinc-300 text-white" id=""></textarea>
+
+                                    <label htmlFor="" className="text-sm text-zinc-300 mb-2 mt-4">Link*</label>
+                                    <input type="text" name="link" onChange={(e) => setLink(e.target.value)} placeholder="Portfolio Link" className="mb-4 py-3 form-control w-full rounded-none focus:shadow-none bg-transparent border-zinc-300 placeholder:text-zinc-300 text-white" />
 
                                     <div className="flex items-center justify-between bg-transparent p-3 rounded">
                                         <div>

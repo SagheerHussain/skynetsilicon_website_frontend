@@ -1,14 +1,43 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Divider, Button, Drawer } from "@mui/material";
 import { IoFilterSharp } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { ProjectCard } from "../index";
-import { projectsCategories, work } from "../projects";
+import { work } from "../projects";
+import { getPortfolios } from "../../../services/portfolio";
+import { getCategories } from "../../../services/categories";
 
 function FilterProjects({ isClick }) {
   // State Variables
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [open, setOpen] = useState(false);
+  const [projects, setProjects] = useState([]);
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const projects = await getPortfolios();
+        setProjects(projects);
+      } catch (error) {
+        console.error("Error fetching portfolios:", error);
+      }
+    };
+    fetchProjects();
+  }, []);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const categories = await getCategories();
+        console.log("categories", categories);
+        setCategories(categories);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+    fetchCategories();
+  }, []);
 
   // Handle Drawer
   const toggleDrawer = (newOpen) => () => {
@@ -27,8 +56,10 @@ function FilterProjects({ isClick }) {
 
   const filteredProjects =
     selectedCategories.length === 0
-      ? work
-      : work.filter((project) => selectedCategories.includes(project.category));
+      ? projects
+      : projects.filter((project) =>
+          selectedCategories.includes(project.category.slug)
+        );
 
   return (
     <div className="filter_projects">
@@ -39,22 +70,22 @@ function FilterProjects({ isClick }) {
           </h5>
 
           <h6 className="text-zinc-200 mb-2 text-sm">Categories</h6>
-          {projectsCategories?.map((category, ind) => (
+          {categories?.map((category, ind) => (
             <div className=" checkbox-wrapper py-3">
               <input
                 type="checkbox"
-                value={category}
+                value={category.slug}
                 onChange={(e) => handleFilterProjects(e.target.defaultValue)}
-                id={category}
+                id={category._id}
                 className=""
               />
               <label
-                htmlFor={category}
+                htmlFor={category._id}
                 className="text-white"
                 key={ind}
                 // style={{ fontSize: "0.85rem" }}
               >
-                {category
+                {category.slug
                   ?.split("-")
                   .map((word) => word[0].toUpperCase() + word.slice(1))
                   .join(" ")}
@@ -67,15 +98,7 @@ function FilterProjects({ isClick }) {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-white">
-                {filteredProjects.length} items found for
-                <span className="ms-2 text-[#04e4ff]">
-                  {selectedCategories.length > 0 && filteredProjects.length > 0
-                    ? filteredProjects[0].category
-                        ?.split("-")
-                        .map((word) => word[0].toUpperCase() + word.slice(1))
-                        .join(" ")
-                    : "All Categories"}
-                </span>
+                {filteredProjects?.length > 0 ? `${filteredProjects?.length} items found` : "No Items Found"}
               </p>
             </div>
             <div className="lg:hidden block text-end">
@@ -112,24 +135,24 @@ function FilterProjects({ isClick }) {
                   </div>
                   <h5 className="fw-bold mb-4 text-white">Filters</h5>
                   <h6 className="text-white mb-4 text-sm">Categories</h6>
-                  {projectsCategories?.map((categ, ind) => (
+                  {categories?.map((categ, ind) => (
                     <div className=" checkbox-wrapper py-3">
                       <input
                         type="checkbox"
-                        value={categ}
+                        value={categ.slug}
                         onChange={(e) =>
                           handleFilterProjects(e.target.defaultValue)
                         }
-                        id={categ}
+                        id={categ?._id}
                         className=""
                       />
                       <label
-                        htmlFor={categ}
+                        htmlFor={categ?._id}
                         className="text-white"
                         key={ind}
                         // style={{ fontSize: "0.85rem" }}
                       >
-                        {categ
+                        {categ.slug
                           ?.split("-")
                           .map((word) => word[0].toUpperCase() + word.slice(1))
                           .join(" ")}
