@@ -24,7 +24,7 @@ const ProjectCard = ({ project, index }) => {
                         {/* Image container */}
                         <div className="feature_project_img relative rounded transition-transform group-hover:scale-95  duration-500 group-hover:duration-700 overflow-hidden">
                             <picture className="w-full">
-                                <img src={project.src} className="w-full px-2 max-w-full max-h-[440px] object-top object-cover rounded transition-transform group-hover:scale-110 duration-500 group-hover:duration-1000 " loading="lazy" alt="image description" />
+                                <img src={project.src} className="w-full px-2 max-w-full min-h-[440px] object-top object-cover rounded transition-transform group-hover:scale-110 duration-500 group-hover:duration-1000 " loading="lazy" alt="image description" />
                                 <div className="overlay group-hover:backdrop-blur-[3px] absolute top-0 left-0 w-full h-0 group-hover:h-[100%] group-hover:bg-[#00000095] transition duration-500 group-hover:duration-1000"></div>
                             </picture>
                         </div>
