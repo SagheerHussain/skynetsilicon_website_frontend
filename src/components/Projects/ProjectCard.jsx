@@ -20,7 +20,7 @@ const ProjectCard = ({ project, index }) => {
 
 
                 <div className="relative  hover:scale-[1] transition-transform duration-500 hover:duration-700">
-                    <Link className="relative mb-15 block group group--no-event anchor" to="#">
+                    <a className="relative mb-15 block group group--no-event anchor" href={project.link} target="_blank">
                         {/* Image container */}
                         <div className="feature_project_img relative rounded transition-transform group-hover:scale-95  duration-500 group-hover:duration-700 overflow-hidden">
                             <picture className="w-full">
@@ -45,7 +45,7 @@ const ProjectCard = ({ project, index }) => {
                                 ))}
                             </div>
                         </h2>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </>

@@ -66,51 +66,12 @@ const NavbarMenuItems = ({
               </div>
             </div>
           </li>
-          {/* <li className='relative'>
-            <a
-              href="#"
-              onClick={() => handleLinkClick("workHistory")}
-              className={`text-[#eee] pb-[.7rem] pt-[.4rem] lg:py-[.7rem] flex items-center justify-center lg:justify-start text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]`}
-              style={{ "--i": "0.05s" }}
-            >
-              Work History <MdOutlineKeyboardArrowDown className={`ms-3 transition-all duration-300 ease-in-out ${activeLink === "workHistory" && "rotate-[-180deg]"}`} />
-            </a>
-            <div className={`navbar_sub_menu flex ${activeLink === "workHistory" ? "opacity-100" : "opacity-0"} transition-all duration-300 ease-in-out items-start ${activeLink === "workHistory" ? "lg:h-[200px] h-[120px] overflow-y-auto" : "h-0"}`}>
-              <div className="sub_menu me-4">
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Before After</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>AutoRepair Website Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Bank Website Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Dental Web Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Gym Web Design</span>
-              </div>
-              <div className="sub_menu me-4">
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Hotel Web Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Medical Web Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Construction Web Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Plumber Web Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Restaurant Web Design</span>
-              </div>
-              <div className="sub_menu me-4">
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Real Estate Web Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Corporate Web Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Automobile Web Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>HealthCare Web Design</span>
-                <span className='text-white block mb-2 font-semibold cursor-pointer'>Ecommerce Web Design</span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <a href="#" style={{ "--i": "0.2s" }} className={` text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]`}>Digital Trends</a>
-          </li>
-          <li>
-            <a href="#" style={{ "--i": "0.3s" }} className='text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]'>Case Studies</a>
-          </li> */}
           <li>
             <Link to="/projects" style={{ "--i": "0.15s" }} className='nav_menu_link text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]'>Projects</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/pricing-package/web-development" style={{ "--i": "0.2s" }} className='nav_menu_link text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]'>Pricing</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/contact" style={{ "--i": "0.25s" }} className='nav_menu_link text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]'>Contact</Link>
           </li>
