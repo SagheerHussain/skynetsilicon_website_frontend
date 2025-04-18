@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 const ProjectCard = ({ project, index }) => {
-
-    useEffect(() => {
-        console.log(index)
-    }, [])
-
     return (
         <>
             <div className="feature_project_card mb-6 relative">
@@ -24,13 +19,13 @@ const ProjectCard = ({ project, index }) => {
                         {/* Image container */}
                         <div className="feature_project_img relative rounded transition-transform group-hover:scale-95  duration-500 group-hover:duration-700 overflow-hidden">
                             <picture className="w-full">
-                                <img src={project.src} className="w-full px-2 max-w-full min-h-[440px] object-top object-cover rounded transition-transform group-hover:scale-110 duration-500 group-hover:duration-1000 " loading="lazy" alt="image description" />
+                                <img src={project.src} className="w-full px-2 max-w-full rounded transition-transform group-hover:scale-110 duration-500 group-hover:duration-1000 " loading="lazy" alt="image description" />
                                 <div className="overlay group-hover:backdrop-blur-[3px] absolute top-0 left-0 w-full h-0 group-hover:h-[100%] group-hover:bg-[#00000095] transition duration-500 group-hover:duration-1000"></div>
                             </picture>
                         </div>
                         {/* Animated heading */}
                         <h2
-                            className={`text-5xl sm:text-6xl md:text-7xl lg:text-5xl overflow-hidden text-[#04e4ff] m-0 uppercase font-semibold absolute top-1/2 whitespace-nowrap featured-project__headline pointer-events-none ${index % 2 === 0 ? "right-[50%]" : "left-[50%]"}`}
+                            className={`text-5xl sm:text-6xl md:text-7xl lg:text-4xl overflow-hidden text-[#04e4ff] m-0 uppercase font-semibold absolute top-1/2 whitespace-nowrap featured-project__headline pointer-events-none ${index % 2 === 0 ? "right-[50%]" : "left-[50%]"}`}
                             style={{ transform: index % 2 === 0 ? "translate(50%, -50%)" : "translate(-50%, -50%)" }}
                         >
                             <div className="splitter-wrap">

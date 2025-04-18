@@ -6,38 +6,47 @@ import { ProjectCard } from "../index";
 import { work } from "../projects";
 import { getPortfolios } from "../../../services/portfolio";
 import { getCategories } from "../../../services/categories";
+import { useQuery } from "@tanstack/react-query";
 
 function FilterProjects({ isClick }) {
   // State Variables
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [open, setOpen] = useState(false);
-  const [projects, setProjects] = useState([]);
-  const [categories, setCategories] = useState([]);
+  // const [projects, setProjects] = useState([]);
+  // const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const projects = await getPortfolios();
-        setProjects(projects);
-      } catch (error) {
-        console.error("Error fetching portfolios:", error);
-      }
-    };
-    fetchProjects();
-  }, []);
+  // useEffect(() => {
+  //   const fetchProjects = async () => {
+  //     try {
+  //       const projects = await getPortfolios();
+  //       setProjects(projects);
+  //     } catch (error) {
+  //       console.error("Error fetching portfolios:", error);
+  //     }
+  //   };
+  //   fetchProjects();
+  // }, []);
 
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const categories = await getCategories();
-        console.log("categories", categories);
-        setCategories(categories);
-      } catch (error) {
-        console.error("Error fetching categories:", error);
-      }
-    };
-    fetchCategories();
-  }, []);
+  const {
+    data: portfolios,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["portfolios"],
+    queryFn: getPortfolios,
+    staleTime: 1800000,
+  });
+
+  const {
+    data: categories,
+    isLoading: categoriesLoading,
+    error: categoriesError,
+  } = useQuery({
+    queryKey: ["categories"],
+    queryFn: getCategories,
+    staleTime: 1800000,
+  });
+
 
   // Handle Drawer
   const toggleDrawer = (newOpen) => () => {
@@ -56,8 +65,8 @@ function FilterProjects({ isClick }) {
 
   const filteredProjects =
     selectedCategories.length === 0
-      ? projects
-      : projects.filter((project) =>
+      ? portfolios?.portfolios
+      : portfolios?.portfolios?.filter((project) =>
           selectedCategories.includes(project.category.slug)
         );
 
@@ -98,7 +107,9 @@ function FilterProjects({ isClick }) {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-white">
-                {filteredProjects?.length > 0 ? `${filteredProjects?.length} items found` : "No Items Found"}
+                {filteredProjects?.length > 0
+                  ? `${filteredProjects?.length} items found`
+                  : "No Items Found"}
               </p>
             </div>
             <div className="lg:hidden block text-end">
@@ -167,12 +178,12 @@ function FilterProjects({ isClick }) {
           <Divider style={{ backgroundColor: "#999" }} className="my-2" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 p-3">
-            {filteredProjects.map((project, ind) => (
+            {filteredProjects?.map((project, ind) => (
               <ProjectCard project={project} index={ind + 1} />
             ))}
           </div>
 
-          {filteredProjects.length === 0 && (
+          {filteredProjects?.length === 0 && (
             <p className="text-white text-center">
               There is No Projects Right Now For This Category.
             </p>

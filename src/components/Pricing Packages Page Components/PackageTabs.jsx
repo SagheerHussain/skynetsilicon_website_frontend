@@ -1,4 +1,3 @@
-import { pricing } from "../Pricing";
 import { Tabs } from "../ui/tabs";
 
 export function PackageTabs() {
