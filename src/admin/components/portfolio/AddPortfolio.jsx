@@ -143,26 +143,7 @@ const AddPortfolio = () => {
 
                                     <label htmlFor="" className="text-sm text-zinc-300 mb-2 mt-4">Link*</label>
                                     <input type="text" name="link" onChange={(e) => setLink(e.target.value)} placeholder="Portfolio Link" className="mb-4 py-3 form-control w-full rounded-none focus:shadow-none bg-transparent border-zinc-300 placeholder:text-zinc-300 text-white" />
-
-                                    <div className="flex items-center justify-between bg-transparent p-3 rounded">
-                                        <div>
-                                            <p className="text-zinc-300">
-                                                <strong>File Name:</strong> {file.name}
-                                            </p>
-                                            <p className="text-zinc-300">
-                                                <strong>File Size:</strong> {file.size} MB
-                                            </p>
-                                        </div>
-                                        <div className="flex gap-2">
-                                            <button
-
-                                                className="text-red-500 hover:text-red-700"
-                                            >
-                                                Remove
-                                            </button>
-                                        </div>
-                                    </div>
-
+                                    
                                     <button
                                         onClick={handleSubmit}
                                         className="primary-white-btn hover:text-white text-xl"

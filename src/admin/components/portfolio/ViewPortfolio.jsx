@@ -18,9 +18,8 @@ const ViewPortfolio = () => {
         const response = await fetch(
           "https://skynetsilicon-website-backend.vercel.app/api/portfolio"
         );
-        const data = await response.json();
-        console.log("data", data)
-        const formattedRows = data.map((item, index) => ({
+        const { portfolios } = await response.json();
+        const formattedRows = portfolios?.map((item, index) => ({
           id: item._id || index + 1,
           image: item.src || "N/A",
           title: item.title || "N/A",
