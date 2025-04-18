@@ -17,11 +17,9 @@ const ProjectCard = ({ project, index }) => {
                 <div className="relative  hover:scale-[1] transition-transform duration-500 hover:duration-700">
                     <a className="relative mb-15 block group group--no-event anchor" href={project.link} target="_blank">
                         {/* Image container */}
-                        <div className="feature_project_img relative rounded transition-transform group-hover:scale-95  duration-500 group-hover:duration-700 overflow-hidden">
-                            <picture className="w-full">
-                                <img src={project.src} className="w-full px-2 max-w-full rounded transition-transform group-hover:scale-110 duration-500 group-hover:duration-1000 " loading="lazy" alt="image description" />
-                                <div className="overlay group-hover:backdrop-blur-[3px] absolute top-0 left-0 w-full h-0 group-hover:h-[100%] group-hover:bg-[#00000095] transition duration-500 group-hover:duration-1000"></div>
-                            </picture>
+                        <div className="feature_project_img relative rounded-[20px] transition-transform group-hover:scale-95  duration-500 group-hover:duration-700 overflow-hidden">
+                            <img src={project.src} className="w-full px-2 rounded-[20px] transition-transform group-hover:scale-110 duration-500 group-hover:duration-1000 " loading="lazy" alt="image description" />
+                            <div className="overlay group-hover:backdrop-blur-[3px] absolute top-0 left-0 w-full h-0 group-hover:h-[100%] group-hover:bg-[#00000095] transition duration-500 group-hover:duration-1000"></div>
                         </div>
                         {/* Animated heading */}
                         <h2
