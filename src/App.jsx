@@ -9,6 +9,9 @@ import { AddService, ViewService, EditService, AddPortfolio, ViewPortfolio, Edit
 import EditCategory from './admin/components/category/EditCategory';
 
 function App() {
+
+  // console.log(import.meta.env.VITE_BASE_URL)
+
   const [loading, setLoading] = useState(true);
   const [apiLoading, setApiLoading] = useState(false); // State to track API calls
 

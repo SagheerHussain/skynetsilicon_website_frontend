@@ -32,7 +32,7 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
             setIsClick(false);
             console.log(category)
             try {
-                const response = await fetch(`https://skynetsilicon-website-backend.vercel.app/api/services/category/${category}`);
+                const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/services/category/${category}`);
                 const data = await response.json();
                 console.log("Service", data)
                 if (isMounted) {
@@ -40,7 +40,7 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
                     setLoader(false);
                     setTimeout(() => {
                         setApiLoading(false)
-                    }, 2800);
+                    }, 4000);
                     console.log("Fetched Data:", data);
                 }
             } catch (error) {
@@ -57,7 +57,6 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
                     service &&
                     <>
                         <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />
-
 
                         <div className={`main-container `}>
                             <div className={`main w-full h-screen z-50 origin-left transition-all duration-500`}>
@@ -87,4 +86,3 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
 }
 
 export default ServicePage
-

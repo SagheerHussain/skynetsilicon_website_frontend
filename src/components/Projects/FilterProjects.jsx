@@ -12,20 +12,6 @@ function FilterProjects({ isClick }) {
   // State Variables
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [open, setOpen] = useState(false);
-  // const [projects, setProjects] = useState([]);
-  // const [categories, setCategories] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchProjects = async () => {
-  //     try {
-  //       const projects = await getPortfolios();
-  //       setProjects(projects);
-  //     } catch (error) {
-  //       console.error("Error fetching portfolios:", error);
-  //     }
-  //   };
-  //   fetchProjects();
-  // }, []);
 
   const {
     data: portfolios,
