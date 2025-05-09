@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      {(loading || apiLoading) && <PreLoader />} {/* Show when page loads or API is loading */}
+      {(loading) && <PreLoader />} {/* Show when page loads or API is loading */}
 
       <Routes>
         <Route path='/' element={<HomePage setLoading={setLoading} />} />

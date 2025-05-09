@@ -17,7 +17,7 @@ const EditCategory = () => {
 
     const fetchCategory = async () => {
         try {
-            const response = await fetch(`https://skynetsilicon-website-backend.vercel.app/api/category/${id}`);
+            const response = await fetch(`https://skynetsilicon-website-backend.vercel.app/api/category/get/${id}`);
             if (!response.ok) throw new Error("Something went wrong");
             const data = await response.json();
             setCategory(data);

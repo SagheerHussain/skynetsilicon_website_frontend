@@ -14,8 +14,6 @@ const ContactHeader = ({
 
     const matches = useMediaQuery('(max-width:385px)');
 
-    console.log(isClick)
-
     return (
         <>
             <header className={`header ${isClick ? "h-full lg:h-screen overflow-y-hidden" : "min-h-screen"} relative flex items-center justify-center`}>

@@ -14,7 +14,7 @@ export const getPortfolios = async () => {
 export const getPortfolioById = async (id) => {
   try {
     const response = await fetch(
-      `${import.meta.env.VITE_BASE_URL}/api/portfolio/${id}`
+      `${import.meta.env.VITE_BASE_URL}/api/portfolio/id/${id}`
     );
     const data = await response.json();
     return data;

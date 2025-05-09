@@ -89,7 +89,7 @@ const RequestQuote = () => {
   const handleCaptchaChange = async (value) => {
     // Step 1: Verify reCAPTCHA with the backend
     const recaptchaResponse = await fetch(
-      "https://skynetsilicon-website-backend.vercel.app/verify-recaptcha",
+      `${import.meta.env.VITE_BASE_URL}/verify-recaptcha`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

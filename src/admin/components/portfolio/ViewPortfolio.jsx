@@ -16,14 +16,15 @@ const ViewPortfolio = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://skynetsilicon-website-backend.vercel.app/api/portfolio"
+          "http://localhost:5000/api/portfolio"
         );
         const { portfolios } = await response.json();
+        console.log("portfolios", portfolios);
         const formattedRows = portfolios?.map((item, index) => ({
           id: item._id || index + 1,
           image: item.src || "N/A",
           title: item.title || "N/A",
-          category: item.category.name || "N/A",
+          categories: item.categories.map((category) => category.name).join(", ") || "N/A",
           link: item.link || "N/A",
         }));
         setRows(formattedRows);
@@ -52,10 +53,10 @@ const ViewPortfolio = () => {
       editable: true,
     },
     {
-      field: "category",
-      headerName: "Category",
+      field: "categories",
+      headerName: "Categories",
       flex: 1,
-      minWidth: 150,
+      minWidth: 250,
       editable: true,
     },
     {

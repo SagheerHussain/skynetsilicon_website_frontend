@@ -5,6 +5,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useNavigate } from 'react-router-dom'; // For navigation
 import Swal from 'sweetalert2';
 import GridTable from '../GridTable';
+import { DataArray } from '@mui/icons-material';
 
 const ViewCategory = () => {
     const [rows, setRows] = useState([]);
@@ -119,8 +120,9 @@ const ViewCategory = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://skynetsilicon-website-backend.vercel.app/api/category');
+                const response = await fetch('http://localhost:5000/api/category');
                 const data = await response.json();
+                console.log("specific categories", data);
                 const formattedRows = data.map((item, index) => ({
                     id: item._id || index + 1,
                     category: item.name || "N/A",

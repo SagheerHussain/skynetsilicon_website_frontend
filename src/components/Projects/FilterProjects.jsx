@@ -3,15 +3,15 @@ import { Box, Divider, Button, Drawer } from "@mui/material";
 import { IoFilterSharp } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { ProjectCard } from "../index";
-import { work } from "../projects";
 import { getPortfolios } from "../../../services/portfolio";
-import { getCategories } from "../../../services/categories";
+import { getSpecificCategories } from "../../../services/categories";
 import { useQuery } from "@tanstack/react-query";
 
 function FilterProjects({ isClick }) {
   // State Variables
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [open, setOpen] = useState(false);
+  const [categories, setCategories] = useState([]);
 
   const {
     data: portfolios,
@@ -23,16 +23,18 @@ function FilterProjects({ isClick }) {
     staleTime: 1800000,
   });
 
-  const {
-    data: categories,
-    isLoading: categoriesLoading,
-    error: categoriesError,
-  } = useQuery({
-    queryKey: ["categories"],
-    queryFn: getCategories,
-    staleTime: 1800000,
-  });
-
+  // Fetch Categories
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const categories = await getSpecificCategories();
+        setCategories(categories);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchCategories();
+  }, []);
 
   // Handle Drawer
   const toggleDrawer = (newOpen) => () => {
@@ -53,7 +55,9 @@ function FilterProjects({ isClick }) {
     selectedCategories.length === 0
       ? portfolios?.portfolios
       : portfolios?.portfolios?.filter((project) =>
-          selectedCategories.includes(project.category.slug)
+          project.categories?.some((cat) =>
+            selectedCategories.includes(cat.slug)
+          )
         );
 
   return (

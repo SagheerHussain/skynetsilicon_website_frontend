@@ -4,13 +4,11 @@ import { Footer, Navbar, NavbarMenuItems, ServiceDetails, ServiceHeader, Subscri
 import { useLocation, useParams } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
 
-const ServicePage = ({ setApiLoading, apiLoading }) => {
+const ServicePage = ({ setApiLoading }) => {
 
     // State Variables
     const [isClick, setIsClick] = useState(false);
     const [service, setService] = useState(null);
-
-    const [loader, setLoader] = useState(true);
 
     // Get Location
     const location = useLocation();
@@ -29,6 +27,7 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
 
         (async () => {
             setApiLoading(true);
+            // setLoader(true);
             setIsClick(false);
             console.log(category)
             try {
@@ -38,15 +37,16 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
                 if (isMounted) {
                     setService(data);
                     setLoader(false);
-                    setTimeout(() => {
-                        setApiLoading(false)
-                    }, 4000);
                     console.log("Fetched Data:", data);
                 }
             } catch (error) {
                 console.log("Error fetching service data:", error);
             }
         })();
+
+        return () => {
+            isMounted = false;
+        };
 
     }, [category, location.pathname]);
 
@@ -58,7 +58,7 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
                     <>
                         <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />
 
-                        <div className={`main-container `}>
+                        <div className={`main-container`}>
                             <div className={`main w-full h-screen z-50 origin-left transition-all duration-500`}>
                                 <ServiceHeader service={service} isClick={isClick} />
                                 <main id="main_sections" className={`transition-all ease-in ${isClick ? "opacity-0 pointer-events-none" : "opacity-100"
