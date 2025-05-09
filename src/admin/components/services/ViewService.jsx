@@ -16,7 +16,7 @@ const ViewService = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://skynetsilicon-website-backend.vercel.app/api/services');
+                const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/services`);
                 const data = await response.json();
                 const formattedRows = data.map((item, index) => ({
                     id: item._id || index + 1,
@@ -93,7 +93,7 @@ const ViewService = () => {
 
         if (result.isConfirmed) {
             try {
-                await fetch(`https://skynetsilicon-website-backend.vercel.app/api/services/delete/${selectedId}`, {
+                await fetch(`${import.meta.env.VITE_BASE_URL}/api/services/delete/${selectedId}`, {
                     method: 'DELETE',
                 });
                 setRows(rows.filter(row => row.id !== selectedId));
@@ -124,7 +124,7 @@ const ViewService = () => {
 
         if (result.isConfirmed) {
             try {
-                await fetch(`https://skynetsilicon-website-backend.vercel.app/api/services/delete-multiple?ids=${selectedRows.join(',')}`, {
+                await fetch(`${import.meta.env.VITE_BASE_URL}/api/services/delete-multiple?ids=${selectedRows.join(',')}`, {
                     method: 'DELETE',
                 });
 

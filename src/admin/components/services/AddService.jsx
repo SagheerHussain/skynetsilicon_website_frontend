@@ -68,7 +68,7 @@ const AddService = () => {
         setLoading(true);
 
         try {
-            const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/services", {
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/services`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -98,7 +98,7 @@ const AddService = () => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/category");
+                const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category`);
                 const data = await response.json();
                 setCategories(data);
                 console.log(data)

@@ -17,7 +17,7 @@ const EditCategory = () => {
 
     const fetchCategory = async () => {
         try {
-            const response = await fetch(`https://skynetsilicon-website-backend.vercel.app/api/category/get/${id}`);
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category/get/${id}`);
             if (!response.ok) throw new Error("Something went wrong");
             const data = await response.json();
             setCategory(data);
@@ -34,7 +34,7 @@ const EditCategory = () => {
     const handleEditCategory = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`https://skynetsilicon-website-backend.vercel.app/api/category/update/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category/update/${id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name: newCategory ? newCategory : category.name, slug: slug ? slug : category.slug })

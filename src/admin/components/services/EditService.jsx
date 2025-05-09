@@ -27,7 +27,7 @@ const EditService = () => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch(`https://skynetsilicon-website-backend.vercel.app/api/services/id/${id}`);
+                const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/services/id/${id}`);
                 const data = await response.json();
 
                 setTitle(data.title || "");
@@ -51,7 +51,7 @@ const EditService = () => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/category");
+                const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category`);
                 const data = await response.json();
                 setCategories(data);
             } catch (error) {
@@ -106,7 +106,7 @@ const EditService = () => {
         setLoading(true);
 
         try {
-            const response = await fetch(`https://skynetsilicon-website-backend.vercel.app/api/services/update/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/services/update/${id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),

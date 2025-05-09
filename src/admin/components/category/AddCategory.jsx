@@ -14,7 +14,7 @@ const AddCategory = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch("https://skynetsilicon-website-backend.vercel.app/api/category", {
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json", // Ensure JSON data is sent

@@ -10,7 +10,7 @@ import { useQuery } from '@tanstack/react-query';
 
 // Fetching
 const fetchCategories = async () => {
-    const response = await fetch("https://skynetsiliconserver.vercel.app/api/category");
+    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category`);
     if (!response.ok) {
         throw new Error("Categories could not fetch");
     }

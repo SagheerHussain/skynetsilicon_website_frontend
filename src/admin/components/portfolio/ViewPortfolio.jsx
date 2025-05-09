@@ -16,7 +16,7 @@ const ViewPortfolio = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/portfolio"
+          `${import.meta.env.VITE_BASE_URL}/api/portfolio`
         );
         const { portfolios } = await response.json();
         console.log("portfolios", portfolios);

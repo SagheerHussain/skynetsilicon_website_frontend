@@ -63,10 +63,10 @@ const AddPortfolio = () => {
     formData.append("link", link);
 
     try {
-      const response = await fetch("http://localhost:5000/api/portfolio", {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/portfolio`, {
         method: "POST",
         body: formData, // ✅ Correct way to send FormData
-      });
+      }); 
 
       const data = await response.json();
       console.log("Response from backend:", data);
@@ -99,7 +99,7 @@ const AddPortfolio = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/category");
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category`);
         const data = await response.json();
         setCategories(data);
         console.log(data);
@@ -113,7 +113,7 @@ const AddPortfolio = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/portfolio");
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/portfolio`);
         const data = await response.json();
         setPortfolio(data);
         console.log(data);

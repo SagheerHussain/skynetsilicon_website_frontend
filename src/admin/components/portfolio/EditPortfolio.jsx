@@ -45,7 +45,7 @@ const EditPortfolio = () => {
   const fetchPortfolioById = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/portfolio/id/${id}`
+        `${import.meta.env.VITE_BASE_URL}/api/portfolio/id/${id}`
       );
       if (!response.ok) throw new Error("Something Went Wrong");
       const data = await response.json();
@@ -75,7 +75,7 @@ const EditPortfolio = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/portfolio/update/${id}`,
+        `${import.meta.env.VITE_BASE_URL}/api/portfolio/update/${id}`,
         {
           method: "PUT",
           body: formData,
@@ -98,7 +98,7 @@ const EditPortfolio = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/category");
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category`);
         const data = await response.json();
         setCategories(data);
         console.log(data);

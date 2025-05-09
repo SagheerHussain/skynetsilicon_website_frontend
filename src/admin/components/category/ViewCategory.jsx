@@ -45,7 +45,7 @@ const ViewCategory = () => {
 
         if (result.isConfirmed) {
             try {
-                await fetch(`https://skynetsilicon-website-backend.vercel.app/api/category/delete/${selectedId}`, {
+                await fetch(`${import.meta.env.VITE_BASE_URL}/api/category/delete/${selectedId}`, {
                     method: 'DELETE',
                 });
                 setRows(rows.filter(row => row.id !== selectedId));
@@ -76,7 +76,7 @@ const ViewCategory = () => {
 
         if (result.isConfirmed) {
             try {
-                await fetch(`https://skynetsilicon-website-backend.vercel.app/api/category/delete-multiple?ids=${selectedRows.join(',')}`, {
+                await fetch(`${import.meta.env.VITE_BASE_URL}/api/category/delete-multiple?ids=${selectedRows.join(',')}`, {
                     method: 'DELETE',
                 });
 
@@ -120,7 +120,7 @@ const ViewCategory = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/category');
+                const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category`);
                 const data = await response.json();
                 console.log("specific categories", data);
                 const formattedRows = data.map((item, index) => ({
