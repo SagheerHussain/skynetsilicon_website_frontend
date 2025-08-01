@@ -24,12 +24,12 @@ const ComingSoon = () => {
                 <h5 className='text-white'>Our New Site Is</h5>
                 <h1>COMING SOON</h1>
                 <p>From automation of people processes to creating <br className='d-lg-block d-none' /> an engaged and driven culture.</p>
-                <div className="mt-4 coming-soon-button">
+                {/* <div className="mt-4 coming-soon-button">
                   <a href={`/`} className='flex items-center p-3 font-bold'>
                     <span className='text-xl'>Go Back To Home</span>
                     <GoArrowSwitch className='bg-dark text-white p-2 text-3xl rounded-full ms-3' />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
 

@@ -29,7 +29,7 @@ const Footer = ({ className }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-sm-6">
+                        {/* <div className="col-lg-4 col-sm-6">
                             <div className="footer-menus-links relative ml-[2rem]">
                                 <h3 className='text-white font-bold text-[1.4rem]'>Apps & Development</h3>
                                 <div className="footer-menus mt-[2rem]">
@@ -41,7 +41,7 @@ const Footer = ({ className }) => {
                                     <Link to="/pricing-package/search-engine-optimization" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>SEO Cost Calculator</Link>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                        
                         <div className="col-lg-4 col-sm-6">
                             <div className="footer-menus-links relative ml-[2rem]">

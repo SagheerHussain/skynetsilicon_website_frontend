@@ -84,10 +84,7 @@ function FilterProjects({ isClick }) {
                 key={ind}
                 // style={{ fontSize: "0.85rem" }}
               >
-                {category.slug
-                  ?.split("-")
-                  .map((word) => word[0].toUpperCase() + word.slice(1))
-                  .join(" ")}
+                {category?.name}
               </label>
             </div>
           ))}
